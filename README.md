@@ -3,7 +3,7 @@
 
 <br/>
 
-# https://benevolent.games/
+# https://benev.gg/
 
-This is the source code for the Benevolent Games website.
+building the future of web games
 

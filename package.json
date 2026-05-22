@@ -1,7 +1,7 @@
 {
-	"name": "@benev/website",
 	"private": true,
-	"version": "0.1.3",
+	"name": "@benev/website",
+	"version": "0.2.0-0",
 	"description": "",
 	"license": "MIT",
 	"author": "Chase Moskal <chasemoskal@gmail.com>",
@@ -12,31 +12,27 @@
 		"s"
 	],
 	"scripts": {
-		"build": "run-s _clean _ln _tsc _scute",
-		"start": "octo 'scute -wv' 'tsc -w' 'http-server x'",
+		"build": "rm -rf x && mkdir x && tsc && scute -v",
+		"dev": "octo 'tsc -w' 'scute -wv' 'hottie x'",
 		"test": "exit 0",
-		"_clean": "rm -rf x && mkdir x",
-		"_ln": "run-s _ln:s _ln:assets",
-		"_ln:s": "ln -s \"$(realpath s)\" x/s",
-		"_ln:assets": "ln -s \"$(realpath assets)\" x/assets",
-		"_tsc": "tsc",
-		"_scute": "scute -v"
+		"count": "find s -path '*/_archive' -prune -o -name '*.ts' -exec wc -l {} +"
 	},
 	"dependencies": {
-		"@benev/slate": "^0.3.9"
+		"@e280/sly": "^0.3.12",
+		"@e280/stz": "^0.2.36",
+		"lit": "^3.3.3"
 	},
 	"devDependencies": {
-		"@e280/scute": "^0.0.0-6",
-		"http-server": "^14.1.1",
-		"npm-run-all": "^4.1.5",
-		"typescript": "^5.8.3"
+		"@e280/hottie": "^0.1.1",
+		"@e280/scute": "^0.3.3",
+		"typescript": "^6.0.3"
 	},
+	"homepage": "https://github.com/benev-gg/.github#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/benevolent-games/.github.git"
+		"url": "git+https://github.com/benev-gg/.github.git"
 	},
 	"bugs": {
-		"url": "https://github.com/benevolent-games/.github/issues"
-	},
-	"homepage": "https://github.com/benevolent-games/.github#readme"
+		"url": "https://github.com/benev-gg/.github/issues"
+	}
 }

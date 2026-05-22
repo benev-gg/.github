@@ -3,5 +3,5 @@
 
 <br/>
 
-***https://benevolent.games/*** is building the future of web games.
+***https://benev.gg/*** is building the future of web games.
 

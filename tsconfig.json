@@ -5,11 +5,8 @@
 		"outDir": "x",
 		"target": "es2023",
 		"lib": ["es2023", "dom", "webworker"],
-		"module": "esnext",
-		"moduleResolution": "node",
-		"experimentalDecorators": true,
-		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true,
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
 		"sourceMap": true,
 		"declaration": true,
 		"skipLibCheck": true
@@ -19,8 +16,6 @@
 		"s/**/*.js"
 	],
 	"exclude": [
-		"s/**/_*",
-		"mount/**/*",
-		"assets/**/*"
+		"s/**/_*"
 	]
 }
