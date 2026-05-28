@@ -18,13 +18,18 @@
 		"count": "find s -path '*/_archive' -prune -o -name '*.ts' -exec wc -l {} +"
 	},
 	"dependencies": {
-		"@e280/sly": "^0.3.12",
-		"@e280/stz": "^0.2.36",
-		"lit": "^3.3.3"
+		"@e280/sly": "^0.4.0-next.5",
+		"@e280/strata": "^0.4.0-next.8",
+		"@e280/stz": "^0.3.0-next.1",
+		"lit": "^3.3.3",
+		"micromark": "^4.0.2"
 	},
 	"devDependencies": {
 		"@e280/hottie": "^0.1.1",
+		"@e280/octo": "^0.1.1",
 		"@e280/scute": "^0.3.3",
+		"@types/node": "^25.9.1",
+		"smol-toml": "^1.6.1",
 		"typescript": "^6.0.3"
 	},
 	"homepage": "https://github.com/benev-gg/.github#readme",

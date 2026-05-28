@@ -1,0 +1,12 @@
+
+@layer vars {
+	:root {
+		--bg: #111;
+		--prime: #ebb935;
+
+		--link: #0ff8;
+		--select-bg: #f60;
+		--select-color: #ff8;
+	}
+}
+

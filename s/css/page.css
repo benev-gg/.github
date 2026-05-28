@@ -1,0 +1,25 @@
+
+@layer page {
+	:root {
+		color-scheme: dark;
+	}
+
+	html, body {
+		min-height: 100%;
+	}
+
+	html {
+		font-size: 16px;
+		font-family: sans-serif;
+
+		color: color-mix(in lch, transparent, var(--prime) 50%);
+		background: #111;
+		background:
+			radial-gradient(circle, #0006, #000f),
+			url("https://benev-storage.sfo2.cdn.digitaloceanspaces.com/website/bg1.avif") center center / cover;
+
+		scrollbar-gutter: stable;
+		scrollbar-width: thin;
+	}
+}
+

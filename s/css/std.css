@@ -1,0 +1,27 @@
+
+@layer std {
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	a {
+		color: var(--link);
+		text-decoration: none;
+
+		&:visited {
+			color: color-mix(in srgb, purple, var(--link) 70%);
+		}
+
+		&:hover {
+			color: color-mix(in srgb, white, var(--link) 90%);
+			text-decoration: underline;
+		}
+
+		&:active {
+			color: color-mix(in srgb, white, var(--link) 50%);
+		}
+	}
+}
+
