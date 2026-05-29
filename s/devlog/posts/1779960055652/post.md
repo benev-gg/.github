@@ -1,3 +1,0 @@
-
-welcome to the ***devlog.***
-

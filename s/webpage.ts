@@ -3,18 +3,18 @@ import {template, html, socialCard, Html} from "@e280/scute"
 
 const domain = "benev.gg"
 const favicon = "/assets/favicon.png"
-const description = "building the future of web games"
 
 export type PageOptions = {
 	title: string
-	href: string
+	description: string
+	zone: string
 	main: Html
 }
 
-const navlink = (options: PageOptions, href: string, text: string) => (
-	(href === options.href)
-		? html`<a href="${href}" data-active>${text}</a>`
-		: html`<a href="${href}">${text}</a>`
+const navlink = (options: PageOptions, zone: string, text: string) => (
+	(zone === options.zone)
+		? html`<a href="${zone}" data-active>${text}</a>`
+		: html`<a href="${zone}">${text}</a>`
 )
 
 export const webpage = (options: PageOptions) => template(import.meta.url, async orb => html`
@@ -35,20 +35,22 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			<script type="module" src="${orb.hashurl('/main.bundle.min.js')}"></script>
 
 			${socialCard({
+				title: `👼 ${options.title}`,
+				description: options.description,
 				themeColor: "#f2ea8e",
 				siteName: domain,
-				title: `👼 ${options.title}`,
-				description,
 				image: `https://${domain}${favicon}`,
 			})}
 		</head>
 		<body>
 			<header>
 				<img src="${favicon}" alt=""/>
+
 				<div>
 					<h1>benev.gg</h1>
 					<p>building the future of web games</p>
 				</div>
+
 				<nav>
 					${navlink(options, "/", "games")}
 					${navlink(options, "/devlog/", "devlog")}
@@ -61,8 +63,8 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 
 			<footer>
 				<div>
-					<a href="https://discord.gg/BnZx2utdev" alt="">discord</a>
-					<p>version ${orb.packageVersion()}</p>
+					<p><a href="https://discord.gg/BnZx2utdev">discord</a></p>
+					<p><a href="https://github.com/benevolent-games">github</a></p>
 				</div>
 			</footer>
 		</body>

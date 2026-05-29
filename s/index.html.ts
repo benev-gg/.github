@@ -1,13 +1,16 @@
 
 import {template, html} from "@e280/scute"
-import {webpage} from "./lib/ssg/webpage.js"
+import {webpage} from "./webpage.js"
 
 export default template(import.meta.url, async orb => orb.place(
 	webpage({
 		title: "benev.gg",
-		href: "/",
+		description: "building the future of web games",
+		zone: "/",
 		main: html`
-			<h1>coming soon</h1>
+			<div class=content>
+				<h1>coming soon</h1>
+			</div>
 		`,
 	})
 ))

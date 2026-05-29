@@ -13,13 +13,108 @@
 		font-family: sans-serif;
 
 		color: color-mix(in lch, transparent, var(--prime) 50%);
-		background: #111;
-		background:
-			radial-gradient(circle, #0006, #000f),
-			url("https://benev-storage.sfo2.cdn.digitaloceanspaces.com/website/bg1.avif") center center / cover;
+		background: var(--bg);
+		background: radial-gradient(
+			circle,
+			color-mix(
+				in oklch,
+				var(--bg),
+				var(--prime) 10%
+			),
+			#111
+		);
 
 		scrollbar-gutter: stable;
 		scrollbar-width: thin;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space);
+		min-height: 100dvh;
+
+		> * {
+			width: 100%;
+			max-width: 64em;
+		}
+
+		> :is(header, footer) {
+			background: color-mix(
+				in oklch,
+				transparent,
+				var(--prime) 5%
+			);
+			padding: var(--space);
+			box-shadow: 0 0.5em 2em #0008;
+		}
+
+		> header {
+			display: flex;
+			border-bottom: 1px solid var(--line);
+			gap: var(--space);
+
+			> img {
+				height: 4em;
+				width: 4em;
+			}
+
+			> div {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				h1 {
+					color: var(--prime);
+				}
+			}
+
+			> nav {
+				display: flex;
+				align-items: center;
+				gap: var(--space);
+				font-size: 1.2em;
+				margin-left: auto;
+
+				a {
+					position: relative;
+					color: var(--prime);
+					padding: 0.2em;
+
+					&[data-active] {
+						text-shadow: 0 0 0.5em currentColor;
+
+						&::after {
+							content: "•";
+							display: block;
+							position: absolute;
+							top: 100%;
+							left: 0;
+							right: 0;
+							line-height: 0.3em;
+							text-align: center;
+							text-shadow:
+								0 0 0.5em currentColor,
+								0 0 0.5em currentColor;
+						}
+					}
+				}
+			}
+		}
+
+		> main {
+			flex: 1 0 auto;
+
+			.content {
+				padding: var(--pad)
+			}
+		}
+
+		> footer {
+			text-align: right;
+			border-top: 1px solid var(--line);
+		}
 	}
 }
 

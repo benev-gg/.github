@@ -6,6 +6,11 @@
 		box-sizing: border-box;
 	}
 
+	::selection {
+		color: var(--select-color);
+		background: var(--select-bg);
+	}
+
 	a {
 		color: var(--link);
 		text-decoration: none;

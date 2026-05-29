@@ -3,10 +3,16 @@
 	:root {
 		--bg: #111;
 		--prime: #ebb935;
+		--line: #ebb93588;
 
 		--link: #0ff8;
 		--select-bg: #f60;
 		--select-color: #ff8;
+
+		--pad: 0.5em;
+		--space: 1em;
+		--anim: 300ms;
+		--round: 0.3em;
 	}
 }
 
