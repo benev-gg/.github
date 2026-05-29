@@ -32,6 +32,7 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			<style data-theme>${orb.inject('/css/vars.css')}</style>
 			<style data-theme>${orb.inject('/css/std.css')}</style>
 			<style data-theme>${orb.inject('/css/page.css')}</style>
+			<style data-theme>${orb.inject('/css/games.css')}</style>
 			<script type="module" src="${orb.hashurl('/main.bundle.min.js')}"></script>
 
 			${socialCard({

@@ -12,20 +12,22 @@
 		font-size: 16px;
 		font-family: sans-serif;
 
-		color: color-mix(in lch, transparent, var(--prime) 50%);
-		background: var(--bg);
-		background: radial-gradient(
-			circle,
-			color-mix(
-				in oklch,
-				var(--bg),
-				var(--prime) 10%
-			),
-			#111
-		);
-
 		scrollbar-gutter: stable;
 		scrollbar-width: thin;
+
+		color: color-mix(in lch, transparent, var(--prime) 50%);
+		background:
+			radial-gradient(
+				circle,
+				color-mix(in oklch, transparent 50%, color-mix(
+					in oklch,
+					var(--bg),
+					var(--prime) 10%
+				)),
+				color-mix(in oklch, transparent 50%, var(--bg))
+			),
+			url("/assets/bg.webp") center center / cover,
+			var(--bg);
 	}
 
 	body {
@@ -54,6 +56,7 @@
 			display: flex;
 			border-bottom: 1px solid var(--line);
 			gap: var(--space);
+			border-radius: 0 0 var(--round) var(--round);
 
 			> img {
 				height: 4em;
@@ -105,6 +108,9 @@
 
 		> main {
 			flex: 1 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 
 			.content {
 				padding: var(--pad)
@@ -114,6 +120,7 @@
 		> footer {
 			text-align: right;
 			border-top: 1px solid var(--line);
+			border-radius: var(--round) var(--round) 0 0;
 		}
 	}
 }

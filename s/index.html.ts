@@ -8,9 +8,28 @@ export default template(import.meta.url, async orb => orb.place(
 		description: "building the future of web games",
 		zone: "/",
 		main: html`
-			<div class=content>
-				<h1>coming soon</h1>
-			</div>
+			<section class="games">
+				<a class="gamecard nano" href="https://nano.benev.gg/">
+					<div class="panel">
+						<h2>nano</h2>
+
+						<p class="tagline">
+							survive. build. automate.
+						</p>
+
+						<p class="description">
+							survive in a massive online arena.<br/>
+							build your base. upgrade your robot.<br/>
+							play solo or with friends. gamepads. splitscreen.
+						</p>
+					</div>
+
+					<div class="playbutton">
+						<span class="playicon">▶</span>
+						<span>play</span>
+					</div>
+				</a>
+			</section>
 		`,
 	})
 ))
