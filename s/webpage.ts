@@ -36,6 +36,8 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 				${orb.inject('/css/x.css')}
 				${orb.inject('/css/page.css')}
 				${orb.inject('/css/units/gamelist.css')}
+				${orb.inject('/css/units/devlog-index.css')}
+				${orb.inject('/css/units/devlog-post.css')}
 			</style>
 			<script type="module" src="${orb.hashurl('/main.bundle.min.js')}"></script>
 

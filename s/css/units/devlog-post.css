@@ -1,0 +1,15 @@
+
+@layer page {
+	.devlog-post {
+		padding: var(--space);
+
+		> * + * {
+			margin-top: 0.6em;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+}
+

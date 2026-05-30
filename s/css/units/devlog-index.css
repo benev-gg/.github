@@ -1,0 +1,7 @@
+
+@layer page {
+	.devlog-index {
+		padding: var(--space);
+	}
+}
+

@@ -1,5 +1,6 @@
 
 export type Post = {
+	dir: string
 	slug: string
 	time: number
 	author: string

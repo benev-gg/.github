@@ -11,7 +11,7 @@ export async function loadPosts(postsDir: string) {
 	const ents = (await fs.readdir(postsDir, {withFileTypes: true}))
 		.filter(d => d.isDirectory())
 
-	return Promise.all(ents.map(async(ent): Promise<Post> => {
+	const posts = await Promise.all(ents.map(async(ent): Promise<Post> => {
 		const dir = path.join(postsDir, ent.name)
 		const postSource = await fs.readFile(path.join(dir, "post.md"), "utf8")
 		const [, tomlSource, markdownSource] = postSource.split("+++")
@@ -26,7 +26,9 @@ export async function loadPosts(postsDir: string) {
 
 		slugs.add(post.slug)
 
-		return {...meta, content}
+		return {...meta, dir, content}
 	}))
+
+	return posts.sort((a, b) => a.time - b.time)
 }
 
