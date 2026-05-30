@@ -8,27 +8,31 @@ export default template(import.meta.url, async orb => orb.place(
 		description: "building the future of web games",
 		zone: "/",
 		main: html`
-			<section class="games">
-				<a class="gamecard nano" href="https://nano.benev.gg/">
-					<div class="panel">
-						<h2>nano</h2>
+			<section class=gamelist>
+				<div class="game nano">
+					<div class=panel>
+						<hgroup>
+							<h2>nano</h2>
+							<p>build. survive. automate.</p>
+						</hgroup>
 
-						<p class="tagline">
-							survive. build. automate.
-						</p>
+						<div>
+							<p>fight for survival in a massive online arena.</p>
+							<p>build your base. upgrade your robot.</p>
+						</div>
 
-						<p class="description">
-							survive in a massive online arena.<br/>
-							build your base. upgrade your robot.<br/>
-							play solo or with friends. gamepads. splitscreen.
-						</p>
+						<ul>
+							<li>online multiplayer</li>
+							<li>gamepad support</li>
+							<li>4 player splitscreen</li>
+						</ul>
 					</div>
 
-					<div class="playbutton">
-						<span class="playicon">▶</span>
-						<span>play</span>
-					</div>
-				</a>
+					<nav>
+						<a x-button=chill href="https://nano.benev.gg/">learn</a>
+						<a x-button=juicy href="https://nano.benev.gg/play/">▶ play</a>
+					</nav>
+				</div>
 			</section>
 		`,
 	})

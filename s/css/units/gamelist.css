@@ -1,0 +1,66 @@
+
+@layer page {
+	.gamelist {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space);
+		padding: min(10dvh, 24em) 0;
+	}
+
+	.game.nano {
+		background: url("/assets/nano.webp") center center / cover;
+	}
+
+	.game {
+		display: flex;
+		flex-wrap: wrap;
+
+		padding: clamp(var(--space), 5dvw, 6em);
+
+		background: #0004;
+		border: var(--border);
+		border-radius: var(--round);
+		box-shadow: var(--box-shadow);
+
+		> * {
+			flex: 1 1 10em;
+		}
+
+		.panel {
+			display: flex;
+			flex-direction: column;
+			gap: var(--space);
+
+			> hgroup {
+				h2 {
+					font-size: 3em;
+					color: var(--prime);
+					text-shadow: 0 0 1em var(--prime);
+				}
+				p {
+					font-size: 1.4em;
+					color: var(--prime);
+					font-weight: bold;
+				}
+			}
+
+			> div {
+				color: white;
+			}
+
+			> ul {
+				list-style: none;
+			}
+		}
+
+		nav {
+			display: flex;
+			align-items: end;
+			justify-content: end;
+			gap: var(--pad);
+
+			font-size: 1.2em;
+		}
+	}
+}
+

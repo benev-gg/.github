@@ -1,0 +1,48 @@
+
+@layer x {
+	[x-button] {
+		opacity: 0.9;
+		transition: transform var(--anim) ease;
+
+		display: inline-block;
+		padding: var(--pad) var(--space);
+
+		text-decoration: none;
+		border: none;
+
+		border-radius: var(--round);
+		font-weight: bold;
+		text-transform: uppercase;
+
+		color: white;
+		background: linear-gradient(
+			in oklch,
+			#555,
+			#333
+		);
+
+		&[x-button="chill"] {
+			opacity: 0.8;
+		}
+
+		&[x-button="juicy"] {
+			color: color-mix(in oklch, var(--bg), var(--prime) 20%);
+			background: linear-gradient(
+				in oklch,
+				color-mix(in oklch, var(--prime), white 50%),
+				var(--prime)
+			);
+		}
+
+		&:is(:hover, :focus-visible) {
+			opacity: 1;
+			box-shadow: 0 0 1em #fff4;
+			transform: translateY(-0.1em);
+		}
+
+		&:active {
+			opacity: 0.9;
+		}
+	}
+}
+

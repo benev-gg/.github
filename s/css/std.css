@@ -6,6 +6,11 @@
 		box-sizing: border-box;
 	}
 
+	:focus-visible {
+		outline: var(--focus);
+		outline-offset: 0.2em;
+	}
+
 	::selection {
 		color: var(--select-color);
 		background: var(--select-bg);
