@@ -55,6 +55,7 @@
 
 		> header {
 			display: flex;
+			flex-wrap: wrap;
 			border-bottom: var(--thick) solid var(--line);
 			gap: var(--space);
 			border-radius: 0 0 var(--round) var(--round);

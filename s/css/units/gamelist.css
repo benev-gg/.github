@@ -14,6 +14,7 @@
 	.game {
 		display: flex;
 		flex-wrap: wrap;
+		gap: var(--space);
 
 		padding: clamp(var(--space), 5dvw, 6em);
 
