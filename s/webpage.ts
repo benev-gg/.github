@@ -28,12 +28,15 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 
 			<title>${options.title}</title>
 			<link rel="icon" href="${orb.hashurl(favicon)}"/>
-			<style data-theme>${orb.inject('/css/layers.css')}</style>
-			<style data-theme>${orb.inject('/css/vars.css')}</style>
-			<style data-theme>${orb.inject('/css/std.css')}</style>
-			<style data-theme>${orb.inject('/css/x.css')}</style>
-			<style data-theme>${orb.inject('/css/page.css')}</style>
-			<style data-theme>${orb.inject('/css/units/gamelist.css')}</style>
+			<style data-theme>
+				${orb.inject('/css/layers.css')}
+				${orb.inject('/css/layers.css')}
+				${orb.inject('/css/vars.css')}
+				${orb.inject('/css/std.css')}
+				${orb.inject('/css/x.css')}
+				${orb.inject('/css/page.css')}
+				${orb.inject('/css/units/gamelist.css')}
+			</style>
 			<script type="module" src="${orb.hashurl('/main.bundle.min.js')}"></script>
 
 			${socialCard({
@@ -46,10 +49,14 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 		</head>
 		<body>
 			<header>
-				<img src="${favicon}" alt=""/>
+				<a href="/">
+					<img class=logo src="${favicon}" alt=""/>
+				</a>
 
 				<div>
-					<h1>benev.gg</h1>
+					<h1>
+						<a href="/">benev.gg</a>
+					</h1>
 					<p>building the future of web games</p>
 				</div>
 

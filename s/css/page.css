@@ -60,7 +60,7 @@
 			gap: var(--space);
 			border-radius: 0 0 var(--round) var(--round);
 
-			> img {
+			.logo {
 				height: 4em;
 				width: 4em;
 			}
@@ -72,6 +72,10 @@
 
 				h1 {
 					color: var(--prime);
+					a {
+						color: inherit;
+						text-decoration: inherit;
+					}
 				}
 			}
 

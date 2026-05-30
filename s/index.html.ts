@@ -1,6 +1,10 @@
 
 import {template, html} from "@e280/scute"
 import {webpage} from "./webpage.js"
+import {svgScute} from "./lib/icons/utils/svg-scute.js"
+import worldWww from "./lib/icons/tabler/world-www.js"
+import gameController from "./lib/icons/akar/game-controller.js"
+import peopleGroup from "./lib/icons/akar/people-group.js"
 
 export default template(import.meta.url, async orb => orb.place(
 	webpage({
@@ -22,15 +26,15 @@ export default template(import.meta.url, async orb => orb.place(
 						</div>
 
 						<ul>
-							<li>online multiplayer</li>
-							<li>gamepad support</li>
-							<li>4 player splitscreen</li>
+							<li>${svgScute(worldWww)} online multiplayer</li>
+							<li>${svgScute(gameController)} gamepad support</li>
+							<li>${svgScute(peopleGroup)} 4 player splitscreen</li>
 						</ul>
 					</div>
 
 					<nav>
 						<a x-button=chill href="https://nano.benev.gg/">learn</a>
-						<a x-button=juicy href="https://nano.benev.gg/play/">▶ play</a>
+						<a x-button=juicy href="https://nano.benev.gg/play/">▶ play now</a>
 					</nav>
 				</div>
 			</section>

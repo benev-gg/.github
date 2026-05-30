@@ -7,10 +7,6 @@
 		padding: min(10dvh, 24em) 0;
 	}
 
-	.game.nano {
-		background: url("/assets/nano.webp") center center / cover;
-	}
-
 	.game {
 		display: flex;
 		flex-wrap: wrap;
@@ -35,7 +31,7 @@
 			> hgroup {
 				h2 {
 					font-size: 3em;
-					color: var(--prime);
+					color: color-mix(in oklch, var(--prime), white);
 					text-shadow: 0 0 1em var(--prime);
 				}
 				p {
@@ -51,6 +47,17 @@
 
 			> ul {
 				list-style: none;
+
+				li {
+					display: flex;
+					align-items: center;
+					gap: var(--pad);
+
+					svg {
+						width: 1.5em;
+						height: 1.5em;
+					}
+				}
 			}
 		}
 
@@ -62,6 +69,10 @@
 
 			font-size: 1.2em;
 		}
+	}
+
+	.game.nano {
+		background: url("/assets/nano.webp") center center / cover;
 	}
 }
 
