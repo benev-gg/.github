@@ -29,6 +29,6 @@ export async function loadPosts(postsDir: string) {
 		return {...meta, dir, content}
 	}))
 
-	return posts.sort((a, b) => a.time - b.time)
+	return posts.sort((a, b) => b.time - a.time)
 }
 

@@ -6,8 +6,8 @@ export type Post = {
 	author: string
 	title: string
 	summary: string
+	image: string
 	tags: string[]
-
 	content: string
 }
 

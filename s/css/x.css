@@ -26,6 +26,7 @@
 		}
 
 		&[x-button="juicy"] {
+			text-shadow: none;
 			color: color-mix(in oklch, var(--bg), var(--prime) 20%);
 			background: linear-gradient(
 				in oklch,

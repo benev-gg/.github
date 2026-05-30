@@ -1,9 +1,9 @@
 +++
-time = 1779960055653
-author = "chase280"
+time = 1780135980563
+author = "chase"
 slug = "cool-post"
 title = "my cool post"
-summary = "it's just another test."
+summary = "it's just another test"
 image = ""
 tags = ["test", "incredi"]
 +++
