@@ -8,7 +8,7 @@
 
 		--line: #ebb93588;
 		--thick: 1px;
-		--border: var(--thick) solid var(--line);
+		--border: var(--thick) solid color-mix(in oklch, transparent, var(--line) 50%);
 
 		--link: #0ff8;
 		--select-bg: #f60;
