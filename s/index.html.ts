@@ -34,7 +34,7 @@ export default template(import.meta.url, async orb => orb.place(
 
 					<nav>
 						<a x-button=chill href="https://nano.benev.gg/">learn</a>
-						<a x-button=juicy href="https://nano.benev.gg/play/">▶ play now</a>
+						<a x-button=juicy href="https://nano.benev.gg/play/">▶ play</a>
 					</nav>
 				</div>
 			</section>

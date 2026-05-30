@@ -9,6 +9,9 @@ export const postPage = (post: Post) => template(
 		title: post.title,
 		zone: "/devlog/",
 		description: post.summary,
+		image: post.image
+			? "/" + orb.base.slice(2) + "/" + post.image
+			: undefined,
 		main: html`
 			<div class=devlog-post>
 				<h1>${post.title}</h1>

@@ -9,6 +9,7 @@ export type PageOptions = {
 	description: string
 	zone: string
 	main: Html
+	image?: string
 }
 
 const navlink = (options: PageOptions, zone: string, text: string) => (
@@ -46,7 +47,7 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 				description: options.description,
 				themeColor: "#f2ea8e",
 				siteName: domain,
-				image: `https://${domain}${favicon}`,
+				image: `https://${domain}${options.image ?? favicon}`,
 			})}
 		</head>
 		<body>
