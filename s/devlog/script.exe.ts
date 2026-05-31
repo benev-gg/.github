@@ -1,6 +1,6 @@
 
 import {join} from "path"
-import {exe} from "@e280/scute"
+import {exe, Orb} from "@e280/scute"
 import {cp, readdir} from "fs/promises"
 import {postPage} from "./post-page.js"
 import {indexPage} from "./index-page.js"
@@ -14,7 +14,8 @@ export default exe(import.meta.url, async orb => {
 
 	for (const post of posts) {
 		const newDir = `${orb.root}/devlog/${post.slug}`
-		const postContent = await postPage(post)(orb.root, newDir)
+		const postOrb = new Orb(orb.root, orb.mod, `${newDir}/index.html`)
+		const postContent = await postPage(post)(postOrb)
 		await orb.io.write(`${post.slug}/index.html`, await postContent.render())
 
 		for (const entry of await readdir(post.dir))

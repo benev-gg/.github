@@ -10,7 +10,7 @@ export const postPage = (post: Post) => template(
 		zone: "/devlog/",
 		description: post.summary,
 		image: post.image
-			? "/" + orb.base.slice(2) + "/" + post.image
+			? orb.url(`@/${post.image}`, true)
 			: undefined,
 		main: html`
 			<div class=devlog-post>
