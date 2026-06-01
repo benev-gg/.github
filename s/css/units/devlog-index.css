@@ -7,29 +7,34 @@
 			list-style: none;
 			display: flex;
 			flex-direction: column;
-			gap: var(--space);
+			gap: calc(var(--space) * 3);
 		}
 
 		.post {
 			display: flex;
-			gap: var(--space);
+			flex-wrap: wrap;
 		}
 
 		.author {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
+			flex-wrap: wrap;
 			align-items: center;
 			gap: var(--pad);
 
+			width: 100%;
+			padding: 0 var(--space);
+			padding-bottom: var(--pad);
+
 			> span {
-				font-size: 1.5em;
+				font-size: 1.2em;
 				font-weight: bold;
 				color: var(--prime);
 			}
 
 			> img {
-				width: 5em;
-				height: 5em;
+				width: 2em;
+				height: 2em;
 				border-radius: 5em;
 				border: 2px solid var(--prime);
 			}
@@ -38,12 +43,14 @@
 				opacity: 0.4;
 				display: flex;
 				flex-direction: column;
-				align-items: center;
+				align-items: end;
+				margin-left: auto;
+				font-size: 0.8em;
 			}
 		}
 
 		article {
-			flex: 1 1 auto;
+			flex: 1 1 20em;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -64,16 +71,13 @@
 				align-items: start;
 
 				h2 {
-					color: white;
-					font-size: 2.5em;
-
-					a {
-						color: inherit;
-					}
+					color: var(--intense);
+					font-size: 1.5em;
+					a { color: inherit; }
 				}
 
 				p {
-					font-size: 1.5em;
+					font-size: 1em;
 				}
 
 				:is(h2, p) {
@@ -114,11 +118,41 @@
 			}
 		}
 
-		.post:not(:last-of-type) .author::after {
-			content: "";
-			display: block;
-			flex: 1 1 auto;
-			border-right: 3px solid var(--line);
+		@container (width > 50em) {
+			.posts {
+				gap: var(--space);
+			}
+
+			.post {
+				gap: var(--space);
+			}
+
+			.post .author {
+				width: auto;
+				flex-direction: column;
+
+				> img {
+					width: 5em;
+					height: 5em;
+				}
+
+				> time {
+					align-items: center;
+					margin: unset;
+				}
+			}
+
+			.post article {
+				h2 { font-size: 2.5em; }
+				p { font-size: 1.5em; }
+			}
+
+			.post:not(:last-of-type) .author::after {
+				content: "";
+				display: block;
+				flex: 1 1 auto;
+				border-right: 3px solid var(--line);
+			}
 		}
 	}
 }

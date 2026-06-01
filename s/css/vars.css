@@ -4,6 +4,7 @@
 		--bg: #111;
 		--prime: #ebb935;
 		--text: color-mix(in oklch, var(--prime), #fff8);
+		--intense: white;
 		--focus: 2px solid cyan;
 
 		--line: #ebb93588;
