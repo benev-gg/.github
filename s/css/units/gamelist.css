@@ -42,7 +42,7 @@
 			}
 
 			> div {
-				color: white;
+				color: var(--intense);
 			}
 
 			> ul {
