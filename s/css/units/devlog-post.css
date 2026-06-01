@@ -1,14 +1,38 @@
 
 @layer page {
 	.devlog-post {
-		padding: var(--space);
-
-		> * + * {
-			margin-top: 0.6em;
+		> img {
+			max-width: 100%;
+			border-radius: var(--round);
+			box-shadow: var(--box-shadow);
 		}
 
-		img {
-			max-width: 100%;
+		> header {
+			display: flex;
+			flex-wrap: wrap;
+
+			.lead {
+				flex: 1 1 auto;
+				padding: var(--space);
+			}
+
+			.author {
+				padding: var(--space);
+			}
+		}
+
+		> section {
+			padding: var(--space);
+		}
+		
+		h1 {
+			font-size: 2.5em;
+			color: var(--intense);
+		}
+
+		h2 {
+			font-size: 1.5em;
+			color: var(--prime);
 		}
 	}
 }
