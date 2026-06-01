@@ -15,7 +15,9 @@ export const postPage = (post: Post) => template(
 			title: post.title,
 			description: post.summary,
 
-			image: imageUrl,
+			image: post.image
+				? imageUrl
+				: undefined,
 
 			main: html`
 				<div class=devlog-post>
