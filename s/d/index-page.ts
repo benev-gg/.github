@@ -9,7 +9,7 @@ export const indexPage = (posts: Post[]) => template(
 	import.meta.url,
 	async orb => orb.place(webpage({
 		title: "benev devlog",
-		zone: "/devlog/",
+		zone: "/d/",
 		description: "building the future of web games",
 		main: html`
 			<div class=devlog-index>

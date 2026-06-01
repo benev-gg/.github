@@ -8,14 +8,14 @@ import {indexPage} from "./index-page.js"
 import {loadPosts} from "../lib/ssg/posts/load-posts.js"
 
 export default exe(import.meta.url, async orb => {
-	const posts = await loadPosts("s/devlog/posts")
+	const posts = await loadPosts("s/d/posts")
 	const indexContent = await orb.place(indexPage(posts))
 
 	await orb.io.write("index.html", await indexContent.render())
 
 	for (const post of posts) {
 		const {files, dirs} = await list(post.dir)
-		const newDir = `${orb.root}/devlog/${post.slug}`
+		const newDir = `${orb.root}/d/${post.slug}`
 		const postOrb = new Orb(orb.root, orb.mod, `${newDir}/index.html`)
 		const postContent = await postPage(post)(postOrb)
 		await orb.io.write(`${post.slug}/index.html`, await postContent.render())

@@ -65,7 +65,7 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 
 				<nav>
 					${navlink(options, "/", "games")}
-					${navlink(options, "/devlog/", "devlog")}
+					${navlink(options, "/d/", "devlog")}
 				</nav>
 			</header>
 
