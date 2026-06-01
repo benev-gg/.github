@@ -1,8 +1,8 @@
 
 import {html, Orb, template} from "@e280/scute"
-import {Post} from "./parts/types.js"
 import {webpage} from "../webpage.js"
 import {avatar} from "../lib/utils/avatar.js"
+import {Post} from "../lib/ssg/posts/types.js"
 import {nicedate, nicetime} from "../lib/utils/nicedate.js"
 
 export const indexPage = (posts: Post[]) => template(
@@ -23,10 +23,10 @@ export const indexPage = (posts: Post[]) => template(
 
 const renderPost = (orb: Orb) => (post: Post) => {
 	const url = post.slug + "/"
-	const imageUrl = url + post.image
-	const style = post.image
-		? `background: url('${orb.url(imageUrl)}') center center / cover;`
-		: ``
+	const imageUrl = post.image
+		? orb.url(url + post.image)
+		: orb.url("/assets/bannerbg.webp", true)
+	const style = `background: url('${imageUrl}') center center / cover;`
 
 	return html`
 		<li class=post>

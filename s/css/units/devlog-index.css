@@ -13,7 +13,6 @@
 		.post {
 			display: flex;
 			gap: var(--space);
-
 		}
 
 		.author {
@@ -52,13 +51,12 @@
 
 			min-height: calc(100cqw * 9 / 32);
 			height: auto;
-
-			margin-bottom: 1em;
 			padding: var(--space);
 
 			background: #0006;
 			border-radius: var(--round);
 			box-shadow: var(--box-shadow);
+			border-top: var(--border);
 
 			header {
 				display: flex;

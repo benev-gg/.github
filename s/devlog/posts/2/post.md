@@ -4,7 +4,6 @@ author = "lonnie"
 slug = "cool-post"
 title = "a very incredi post"
 summary = "an amazing test with unbelievable results"
-image = ""
 tags = ["test", "incredi"]
 +++
 
