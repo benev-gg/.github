@@ -56,7 +56,7 @@
 		> header {
 			display: flex;
 			flex-wrap: wrap;
-			border-bottom: var(--thick) solid var(--line);
+			border-bottom: var(--thin) solid var(--line);
 			gap: var(--space);
 			border-radius: 0 0 var(--round) var(--round);
 
@@ -128,7 +128,7 @@
 			justify-content: end;
 			--link: #fffa;
 
-			border-top: var(--thick) solid var(--line);
+			border-top: var(--thin) solid var(--line);
 			border-radius: var(--round) var(--round) 0 0;
 		}
 	}

@@ -62,7 +62,7 @@
 				:is(h2, p) {
 					display: inline;
 					background: #0004;
-					backdrop-filter: blur(0.5em);
+					backdrop-filter: blur(var(--blur));
 					padding: 0.1rem 0.5rem;
 					border-radius: 0.3rem;
 					box-decoration-break: clone;

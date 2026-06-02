@@ -8,8 +8,9 @@
 		--focus: 2px solid cyan;
 
 		--line: #ebb93588;
-		--thick: 1px;
-		--border: var(--thick) solid color-mix(in oklch, transparent, var(--line) 50%);
+		--thin: 1px;
+		--thick: 2px;
+		--border: var(--thin) solid color-mix(in oklch, transparent, var(--line) 50%);
 
 		--link: aqua;
 		--select-bg: #f60;
@@ -19,6 +20,7 @@
 		--space: 1em;
 		--anim: 300ms;
 		--round: 0.5em;
+		--blur: 0.5em;
 
 		--box-shadow: 0 0.5em 2em #0008;
 		--text-shadow: 0.04em 0.08em 0.1em #0008;

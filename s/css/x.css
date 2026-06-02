@@ -1,7 +1,7 @@
 
 @layer x {
 	[x-button] {
-		opacity: 0.9;
+		opacity: 0.8;
 		transition: transform var(--anim) ease;
 
 		display: inline-block;
@@ -14,35 +14,23 @@
 		font-weight: bold;
 		text-transform: uppercase;
 
-		color: white;
-		background: linear-gradient(
-			in oklch,
-			#555,
-			#333
-		);
-
-		&[x-button="chill"] {
-			opacity: 0.8;
-		}
-
-		&[x-button="juicy"] {
-			text-shadow: none;
-			color: color-mix(in oklch, var(--bg), var(--prime) 20%);
-			background: linear-gradient(
-				in oklch,
-				color-mix(in oklch, var(--prime), white 50%),
-				var(--prime)
-			);
-		}
+		color: #fff8;
+		background: color-mix(in oklch, transparent, var(--bg));
+		border: var(--thick) solid currentColor;
+		backdrop-filter: blur(var(--blur));
 
 		&:is(:hover, :focus-visible) {
 			opacity: 1;
-			box-shadow: 0 0 1em #fff4;
+			box-shadow: 0 0 1em color-mix(in oklch, transparent, currentColor);
 			transform: translateY(-0.1em);
 		}
 
 		&:active {
-			opacity: 0.9;
+			opacity: 0.8;
+		}
+
+		&[x-button="juicy"] {
+			color: var(--prime);
 		}
 	}
 
