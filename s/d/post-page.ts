@@ -2,6 +2,7 @@
 import {html, template} from "@e280/scute"
 import {webpage} from "../webpage.js"
 import {Post} from "../lib/ssg/posts/types.js"
+import {xAuthor} from "../lib/ssg/posts/x-author.js"
 
 export const postPage = (post: Post) => template(
 	import.meta.url,
@@ -26,14 +27,12 @@ export const postPage = (post: Post) => template(
 						: null}
 
 					<header>
+						${xAuthor(post)}
+
 						<div class=lead>
 							<h1>${post.title}</h1>
 							<h2>${post.summary}</h2>
 							<p>(${post.tags.join(", ")})</p>
-						</div>
-
-						<div class=author>
-							${post.author}
 						</div>
 					</header>
 

@@ -15,40 +15,6 @@
 			flex-wrap: wrap;
 		}
 
-		.author {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			align-items: center;
-			gap: var(--pad);
-
-			width: 100%;
-			padding: 0 var(--space);
-			padding-bottom: var(--pad);
-
-			> span {
-				font-size: 1.2em;
-				font-weight: bold;
-				color: var(--prime);
-			}
-
-			> img {
-				width: 2em;
-				height: 2em;
-				border-radius: 5em;
-				border: 2px solid var(--prime);
-			}
-
-			> time {
-				opacity: 0.4;
-				display: flex;
-				flex-direction: column;
-				align-items: end;
-				margin-left: auto;
-				font-size: 0.8em;
-			}
-		}
-
 		article {
 			flex: 1 1 20em;
 			display: flex;
@@ -127,7 +93,7 @@
 				gap: var(--space);
 			}
 
-			.post .author {
+			.post [x-author] {
 				width: auto;
 				flex-direction: column;
 
@@ -147,7 +113,7 @@
 				p { font-size: 1.5em; }
 			}
 
-			.post:not(:last-of-type) .author::after {
+			.post:not(:last-of-type) [x-author]::after {
 				content: "";
 				display: block;
 				flex: 1 1 auto;

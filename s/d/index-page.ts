@@ -4,6 +4,7 @@ import {webpage} from "../webpage.js"
 import {avatar} from "../lib/utils/avatar.js"
 import {Post} from "../lib/ssg/posts/types.js"
 import {nicedate, nicetime} from "../lib/utils/nicedate.js"
+import { xAuthor } from "../lib/ssg/posts/x-author.js"
 
 export const indexPage = (posts: Post[]) => template(
 	import.meta.url,
@@ -30,14 +31,7 @@ const renderPost = (orb: Orb) => (post: Post) => {
 
 	return html`
 		<li class=post>
-			<div class=author>
-				<img src="${avatar(post.author)}" alt=""/>
-				<span>${post.author}</span>
-				<time>
-					<span>${nicedate(post.time)}</span>
-					<span>${nicetime(post.time)}</span>
-				</time>
-			</div>
+			${xAuthor(post)}
 
 			<article style="${style}">
 				<header>

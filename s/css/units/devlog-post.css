@@ -9,15 +9,29 @@
 
 		> header {
 			display: flex;
-			flex-wrap: wrap;
+			align-items: center;
+			flex-wrap: wrap-reverse;
+			padding: var(--space);
 
 			.lead {
-				flex: 1 1 auto;
-				padding: var(--space);
+				flex: 1 1 20em;
 			}
 
-			.author {
-				padding: var(--space);
+			[x-author] {
+				order: 2;
+				flex-direction: row;
+				width: auto;
+
+				> img {
+					width: 5em;
+					height: 5em;
+				}
+
+				> div {
+					> time {
+						align-items: start;
+					}
+				}
 			}
 		}
 
