@@ -60,7 +60,9 @@
 				}
 
 				p {
+					color: var(--prime);
 					font-size: 1em;
+					font-weight: bold;
 				}
 
 				:is(h2, p) {

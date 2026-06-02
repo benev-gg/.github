@@ -18,7 +18,7 @@
 			gap: calc(var(--space) * 3);
 
 			[x-tags] {
-				padding: var(--pad) 0;
+				padding-bottom: var(--pad);
 			}
 
 			[x-author] {
@@ -42,7 +42,7 @@
 				}
 			}
 
-			section {
+			.content {
 				flex: 1 1 auto;
 				display: flex;
 				flex-direction: column;
@@ -53,17 +53,6 @@
 					flex-direction: column;
 					gap: var(--pad);
 				}
-			}
-
-			h1 {
-				font-size: 2.5em;
-				color: var(--intense);
-				a { color: inherit; }
-			}
-
-			h2 {
-				font-size: 1.5em;
-				color: var(--prime);
 			}
 
 			@container (width > 50em) {

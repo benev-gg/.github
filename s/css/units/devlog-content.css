@@ -1,0 +1,47 @@
+
+@layer page {
+	.devlog-post .content {
+		h1 {
+			font-size: 2.5em;
+			color: var(--intense);
+			a { color: inherit; }
+		}
+
+		h2 {
+			font-size: 1.5em;
+			color: var(--prime);
+		}
+
+		p {
+			max-width: var(--copy-width);
+		}
+
+		p:has(> img) {
+			max-width: 100%;
+		}
+
+		img {
+			max-width: 100%;
+			background: #0004;
+			border-radius: var(--round);
+			box-shadow: var(--box-shadow);
+		}
+
+		blockquote {
+			color: oklch(from currentColor l 0 h / 50%);
+			padding-left: var(--pad);
+			margin-left: var(--pad);
+			font-style: italic;
+			border-left: var(--thick) solid currentColor;
+		}
+
+		hr {
+			border: none;
+			display: block;
+			height: var(--thick);
+			background: oklch(from var(--text) l c h / 25%);
+			margin: var(--space) 0;
+		}
+	}
+}
+
