@@ -26,19 +26,21 @@ export const postPage = (post: Post) => template(
 						? html`<img src="${imageUrl}" alt=""/>`
 						: null}
 
-					<header>
+					<div class=plate>
 						${xAuthor(post)}
 
-						<div class=lead>
-							<h1>${post.title}</h1>
-							<h2>${post.summary}</h2>
-							<p>(${post.tags.join(", ")})</p>
-						</div>
-					</header>
+						<section>
+							<header>
+								<h1>${post.title}</h1>
+								<h2>${post.summary}</h2>
+								<p>(${post.tags.join(", ")})</p>
+							</header>
 
-					<section>
-						${html.raw(post.content)}
-					</section>
+							<div>
+								${html.raw(post.content)}
+							</div>
+						</section>
+					</div>
 				</div>
 			`,
 		}))
