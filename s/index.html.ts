@@ -13,8 +13,8 @@ export default template(import.meta.url, async orb => orb.place(
 		title: "benev.gg",
 		description: consts.description,
 		zone: "/",
-		main: html`
-			<section class=gamelist>
+		content: html`
+			<main class=gamelist>
 				<div class="game nano">
 					<div class=panel>
 						<hgroup>
@@ -39,7 +39,7 @@ export default template(import.meta.url, async orb => orb.place(
 						<a x-button=juicy href="https://nano.benev.gg/play/">▶ play</a>
 					</nav>
 				</div>
-			</section>
+			</main>
 		`,
 	})
 ))

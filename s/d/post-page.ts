@@ -26,8 +26,8 @@ export const postPage = (post: Post) => template(
 				<meta property="article:published_time" content="${new Date(post.time).toISOString()}">
 			`,
 
-			main: html`
-				<div class=devlog-post>
+			content: html`
+				<main class=devlog-post>
 					${post.image
 						? html`<img src="${imageUrl}" alt=""/>`
 						: null}
@@ -47,7 +47,7 @@ export const postPage = (post: Post) => template(
 							</div>
 						</section>
 					</div>
-				</div>
+				</main>
 			`,
 		}))
 	},

@@ -3,14 +3,18 @@
 	.devlog-index {
 		container-type: inline-size;
 
-		.posts {
-			list-style: none;
-			display: flex;
-			flex-direction: column;
-			gap: calc(var(--space) * 3);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space);
+
+		&::before, &::after {
+			content: "";
+			flex: 1 1 auto;
 		}
 
-		.post {
+		&::after { flex: 3 1 auto; }
+
+		article {
 			display: flex;
 			flex-wrap: wrap;
 		}
@@ -28,7 +32,7 @@
 			}
 		}
 
-		article {
+		section {
 			flex: 1 1 20em;
 			display: flex;
 			flex-direction: column;
@@ -98,7 +102,7 @@
 				gap: var(--space);
 			}
 
-			.post {
+			article {
 				gap: var(--space);
 
 				> article {
@@ -110,6 +114,7 @@
 			[x-author] {
 				width: auto;
 				flex-direction: column;
+				padding-bottom: 0;
 
 				> img {
 					width: 5em;
@@ -126,8 +131,7 @@
 				}
 			}
 
-
-			.post:not(:last-of-type) [x-author]::after {
+			article:not(:last-of-type) [x-author]::after {
 				content: "";
 				display: block;
 				flex: 1 1 auto;

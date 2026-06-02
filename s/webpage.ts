@@ -6,7 +6,7 @@ export type PageOptions = {
 	title: string
 	description: string
 	zone: string
-	main: Html
+	content: Html
 	head?: Html
 	image?: string
 	type?: "website" | "article"
@@ -78,9 +78,7 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 				</nav>
 			</header>
 
-			<main>
-				${options.main}
-			</main>
+			${options.content}
 
 			<footer>
 				<a href="https://discord.gg/BnZx2utdev">discord</a>

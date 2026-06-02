@@ -10,7 +10,7 @@ export function xAuthor(post: Post) {
 			<img src="${avatar(post.author)}" alt=""/>
 			<div>
 				<span>${post.author}</span>
-				<time>
+				<time datetime="${new Date(post.time).toISOString()}">
 					<span>${nicedate(post.time)}</span>
 					<span>${nicetime(post.time)}</span>
 				</time>

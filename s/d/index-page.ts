@@ -11,12 +11,10 @@ export const indexPage = (posts: Post[]) => template(
 		zone: "/d/",
 		title: "benev devlog",
 		description: consts.description,
-		main: html`
-			<div class=devlog-index>
-				<ol class=posts>
-					${posts.map(renderPost(orb))}
-				</ol>
-			</div>
+		content: html`
+			<main class=devlog-index>
+				${posts.map(renderPost(orb))}
+			</main>
 		`,
 	})),
 )
@@ -29,10 +27,10 @@ const renderPost = (orb: Orb) => (post: Post) => {
 	const style = `background: url('${imageUrl}') center center / cover;`
 
 	return html`
-		<li class=post>
+		<article class=post>
 			${xAuthor(post)}
 
-			<article style="${style}">
+			<section style="${style}">
 				<header>
 					<h2>
 						<a href="${url}">${post.title}</a>
@@ -52,8 +50,8 @@ const renderPost = (orb: Orb) => (post: Post) => {
 						read &nbsp; ❯
 					</a>
 				</footer>
-			</article>
-		</li>
+			</section>
+		</article>
 	`
 }
 
