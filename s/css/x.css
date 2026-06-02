@@ -39,7 +39,7 @@
 				oklch(from var(--prime) l calc(c * 1.5) h)
 			);
 			&:is(:hover, :focus-visible) {
-				box-shadow: 0 0 1em color-mix(in oklch, transparent, var(--prime));
+				box-shadow: 0 0 2em color-mix(in oklch, transparent, var(--prime));
 			}
 		}
 	}

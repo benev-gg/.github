@@ -16,7 +16,7 @@ export default template(import.meta.url, async orb => orb.place(
 				<div class="game nano">
 					<div class=panel>
 						<hgroup>
-							<h2>nano</h2>
+							<h2><a href="https://nano.benev.gg/">nano</a></h2>
 							<p>build. survive. automate.</p>
 						</hgroup>
 

@@ -33,6 +33,7 @@
 					font-size: 3em;
 					color: color-mix(in oklch, var(--prime), white);
 					text-shadow: 0 0 1em var(--prime);
+					a { color: inherit; }
 				}
 				p {
 					font-size: 1.4em;

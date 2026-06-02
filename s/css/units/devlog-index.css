@@ -90,10 +90,6 @@
 						padding: 0.1em 0.4em;
 					}
 				}
-
-				.read {
-					font-size: 1.2em;
-				}
 			}
 		}
 
@@ -106,8 +102,8 @@
 				gap: var(--space);
 
 				> article {
-					h2 { font-size: 2.5em; }
-					p { font-size: 1.5em; }
+					h2 { font-size: 2em; }
+					p { font-size: 1.2em; }
 				}
 			}
 
