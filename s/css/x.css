@@ -76,5 +76,20 @@
 			}
 		}
 	}
+
+	[x-tags] {
+		opacity: 0.8;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: calc(var(--pad) / 2);
+
+		> li {
+			border-radius: 2em;
+			border: var(--border);
+			padding: 0.1em 0.4em;
+			background: color-mix(in oklch, transparent, var(--bg) 50%);
+		}
+	}
 }
 

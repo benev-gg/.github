@@ -3,8 +3,9 @@ import {html, template} from "@e280/scute"
 import {webpage} from "../webpage.js"
 import {Post} from "../lib/ssg/posts/types.js"
 import {xAuthor} from "../lib/ssg/posts/x-author.js"
+import { xTags } from "../lib/ssg/posts/x-tags.js"
 
-export const postPage = (post: Post) => template(
+export const devlogPost = (post: Post) => template(
 	import.meta.url,
 	async orb => {
 		const imageUrl = post.image
@@ -32,21 +33,21 @@ export const postPage = (post: Post) => template(
 						? html`<img src="${imageUrl}" alt=""/>`
 						: null}
 
-					<div class=plate>
+					<article class=plate>
 						${xAuthor(post)}
 
 						<section>
 							<header>
-								<h1>${post.title}</h1>
+								<h1><a href=".">${post.title}</a></h1>
 								<h2>${post.summary}</h2>
-								<p>(${post.tags.join(", ")})</p>
+								${xTags(post.tags)}
 							</header>
 
 							<div>
 								${html.raw(post.content)}
 							</div>
 						</section>
-					</div>
+					</article>
 				</main>
 			`,
 		}))

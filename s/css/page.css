@@ -72,10 +72,7 @@
 
 				h1 {
 					color: var(--prime);
-					a {
-						color: inherit;
-						text-decoration: inherit;
-					}
+					a { color: inherit; }
 				}
 			}
 

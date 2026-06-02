@@ -80,20 +80,6 @@
 				justify-content: space-between;
 				align-items: end;
 				gap: var(--space);
-
-				.tags {
-					opacity: 0.8;
-					list-style: none;
-					display: flex;
-					flex-wrap: wrap;
-					gap: var(--pad);
-
-					> li {
-						border-radius: 2em;
-						border: var(--border);
-						padding: 0.1em 0.4em;
-					}
-				}
 			}
 		}
 
@@ -105,7 +91,7 @@
 			article {
 				gap: var(--space);
 
-				> article {
+				> section {
 					h2 { font-size: 2em; }
 					p { font-size: 1.2em; }
 				}

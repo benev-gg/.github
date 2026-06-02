@@ -15,7 +15,11 @@
 			display: flex;
 			flex-direction: column;
 			padding: var(--space);
-			gap: calc(var(--space) * 2);
+			gap: calc(var(--space) * 3);
+
+			[x-tags] {
+				padding: var(--pad) 0;
+			}
 
 			[x-author] {
 				flex-direction: row;
@@ -54,6 +58,7 @@
 			h1 {
 				font-size: 2.5em;
 				color: var(--intense);
+				a { color: inherit; }
 			}
 
 			h2 {

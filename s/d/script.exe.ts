@@ -3,13 +3,13 @@ import {join} from "path"
 import {cp} from "fs/promises"
 import {exe, Orb} from "@e280/scute"
 import {list} from "../lib/ssg/list.js"
-import {postPage} from "./post-page.js"
-import {indexPage} from "./index-page.js"
+import {devlogPost} from "./devlog-post.js"
+import {devlogIndex} from "./devlog-index.js"
 import {loadPosts} from "../lib/ssg/posts/load-posts.js"
 
 export default exe(import.meta.url, async orb => {
 	const posts = await loadPosts("s/d/posts")
-	const indexContent = await orb.place(indexPage(posts))
+	const indexContent = await orb.place(devlogIndex(posts))
 
 	await orb.io.write("index.html", await indexContent.render())
 
@@ -17,7 +17,7 @@ export default exe(import.meta.url, async orb => {
 		const {files, dirs} = await list(post.dir)
 		const newDir = `${orb.root}/d/${post.slug}`
 		const postOrb = new Orb(orb.root, orb.mod, `${newDir}/index.html`)
-		const postContent = await postPage(post)(postOrb)
+		const postContent = await devlogPost(post)(postOrb)
 		await orb.io.write(`${post.slug}/index.html`, await postContent.render())
 
 		for (const entry of [...files, ...dirs])

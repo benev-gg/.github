@@ -3,9 +3,10 @@ import {html, Orb, template} from "@e280/scute"
 import {consts} from "../consts.js"
 import {webpage} from "../webpage.js"
 import {Post} from "../lib/ssg/posts/types.js"
+import {xTags} from "../lib/ssg/posts/x-tags.js"
 import {xAuthor} from "../lib/ssg/posts/x-author.js"
 
-export const indexPage = (posts: Post[]) => template(
+export const devlogIndex = (posts: Post[]) => template(
 	import.meta.url,
 	async orb => orb.place(webpage({
 		zone: "/d/",
@@ -39,13 +40,7 @@ const renderPost = (orb: Orb) => (post: Post) => {
 				</header>
 
 				<footer>
-					${post.tags.length > 0 && html`
-						<ul class=tags>
-							${post.tags.map(tag => html`
-								<li>${tag}</li>
-							`)}
-						</ul>
-					`}
+					${xTags(post.tags)}
 					<a class=read x-button href="${url}">
 						read &nbsp; ❯
 					</a>
