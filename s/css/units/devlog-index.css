@@ -15,6 +15,18 @@
 			flex-wrap: wrap;
 		}
 
+		[x-author] {
+			padding: 0 var(--pad);
+			padding-bottom: var(--pad);
+
+			> div {
+				flex: 1 0 auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+		}
+
 		article {
 			flex: 1 1 20em;
 			display: flex;
@@ -93,7 +105,7 @@
 				gap: var(--space);
 			}
 
-			.post [x-author] {
+			[x-author] {
 				width: auto;
 				flex-direction: column;
 
@@ -102,13 +114,17 @@
 					height: 5em;
 				}
 
-				> time {
-					align-items: center;
-					margin: unset;
+				> div {
+					flex: 0 0 auto;
+					flex-direction: column;
+					> time {
+						align-items: center;
+						margin: unset;
+					}
 				}
 			}
 
-			.post article {
+			article {
 				h2 { font-size: 2.5em; }
 				p { font-size: 1.5em; }
 			}
