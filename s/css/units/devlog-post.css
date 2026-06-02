@@ -13,31 +13,32 @@
 
 		.plate {
 			display: flex;
+			flex-direction: column;
 			padding: var(--space);
 			gap: calc(var(--space) * 2);
 
-			> [x-author] {
-				flex-direction: column;
-				width: auto;
+			[x-author] {
+				flex-direction: row;
+				justify-content: center;
+				order: 0;
 
 				> img {
-					width: 5em;
-					height: 5em;
+					width: 4em;
+					height: 4em;
 				}
 
 				> div {
 					display: flex;
 					flex-direction: column;
-					align-items: center;
-					gap: var(--pad);
+					align-items: start;
 
 					> time {
-						align-items: center;
+						align-items: start;
 					}
 				}
 			}
 
-			> section {
+			section {
 				flex: 1 1 auto;
 				display: flex;
 				flex-direction: column;
@@ -58,6 +59,34 @@
 			h2 {
 				font-size: 1.5em;
 				color: var(--prime);
+			}
+
+			@container (width > 50em) {
+				flex-direction: row;
+
+				[x-author] {
+					order: 0;
+					flex: 0 1 auto;
+					width: auto;
+					flex-direction: column;
+					justify-content: start;
+
+					> img {
+						width: 5em;
+						height: 5em;
+					}
+
+					> div {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						gap: var(--pad);
+
+						> time {
+							align-items: center;
+						}
+					}
+				}
 			}
 		}
 	}

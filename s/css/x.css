@@ -55,8 +55,8 @@
 		width: 100%;
 
 		> img {
-			width: 2em;
-			height: 2em;
+			width: 3em;
+			height: 3em;
 			border-radius: 5em;
 			border: 2px solid var(--prime);
 		}

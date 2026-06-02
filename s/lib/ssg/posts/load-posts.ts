@@ -19,7 +19,7 @@ export async function loadPosts(postsDir: string) {
 		const postSource = await readFile(join(dir, "post.md"), "utf8")
 		const [, tomlSource, markdownSource] = postSource.split("+++")
 		const meta = toml.parse(tomlSource) as any
-		const content = micromark(markdownSource)
+		const content = micromark(markdownSource, {allowDangerousHtml: true})
 
 		const image = files.includes(banner)
 			? banner
