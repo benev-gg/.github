@@ -13,12 +13,18 @@ export const postPage = (post: Post) => template(
 
 		return orb.place(webpage({
 			zone: "/d/",
+			type: "article",
 			title: post.title,
 			description: post.summary,
 
 			image: post.image
 				? imageUrl
 				: undefined,
+
+			head: html`
+				<meta name="author" content="${post.author}">
+				<meta property="article:published_time" content="${new Date(post.time).toISOString()}">
+			`,
 
 			main: html`
 				<div class=devlog-post>

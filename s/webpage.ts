@@ -1,15 +1,15 @@
 
+import {consts} from "./consts.js"
 import {template, html, socialCard, Html} from "@e280/scute"
-
-const domain = "benev.gg"
-const favicon = "/assets/favicon.png"
 
 export type PageOptions = {
 	title: string
 	description: string
 	zone: string
 	main: Html
+	head?: Html
 	image?: string
+	type?: "website" | "article"
 }
 
 const navlink = (options: PageOptions, zone: string, text: string) => (
@@ -25,42 +25,51 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			<meta charset="utf-8"/>
 			<meta name="viewport" content="width=device-width,initial-scale=1"/>
 			<meta name="darkreader-lock"/>
-			<style>@layer base{html{background:#000}}</style>
 
 			<title>${options.title}</title>
-			<link rel="icon" href="${orb.hashurl(favicon)}"/>
-			<style data-theme>
-				${orb.inject('/css/layers.css')}
-				${orb.inject('/css/layers.css')}
-				${orb.inject('/css/vars.css')}
-				${orb.inject('/css/std.css')}
-				${orb.inject('/css/x.css')}
-				${orb.inject('/css/page.css')}
-				${orb.inject('/css/units/gamelist.css')}
-				${orb.inject('/css/units/devlog-index.css')}
-				${orb.inject('/css/units/devlog-post.css')}
-			</style>
-			<script type="module" src="${orb.hashurl('/main.bundle.min.js')}"></script>
+			<link rel="canonical" href="${consts.origin + orb.url('@/', true) + '/'}"/>
+			<meta name="description" content="${options.description}"/>
 
 			${socialCard({
+				type: options.type ?? "website",
 				title: `👼 ${options.title}`,
 				description: options.description,
 				themeColor: "#f2ea8e",
-				siteName: domain,
-				image: `https://${domain}${options.image ?? favicon}`,
+				siteName: consts.domain,
+				image: consts.origin + (options.image ?? consts.favicon),
 			})}
+
+			<link rel="icon" href="${orb.hashurl(consts.favicon, true)}"/>
+			<style>@layer base{html{background:#000}}</style>
+
+			${[
+				"css/layers.css",
+				"css/vars.css",
+				"css/std.css",
+				"css/x.css",
+				"css/page.css",
+				"css/units/gamelist.css",
+				"css/units/devlog-index.css",
+				"css/units/devlog-post.css",
+			].map(href => html`
+				<link rel="stylesheet" href="${orb.hashurl(href, true)}"/>
+			`)}
+
+			<script type="module" src="${orb.hashurl('/main.bundle.min.js')}"></script>
+
+			${options.head}
 		</head>
 		<body>
 			<header>
 				<a href="/">
-					<img class=logo src="${favicon}" alt=""/>
+					<img class=logo src="${orb.hashurl(consts.favicon, true)}" alt=""/>
 				</a>
 
 				<div>
 					<h1>
 						<a href="/">benev.gg</a>
 					</h1>
-					<p>building the future of web games</p>
+					<p>${consts.description}</p>
 				</div>
 
 				<nav>

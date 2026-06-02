@@ -1,17 +1,16 @@
 
 import {html, Orb, template} from "@e280/scute"
+import {consts} from "../consts.js"
 import {webpage} from "../webpage.js"
-import {avatar} from "../lib/utils/avatar.js"
 import {Post} from "../lib/ssg/posts/types.js"
-import {nicedate, nicetime} from "../lib/utils/nicedate.js"
-import { xAuthor } from "../lib/ssg/posts/x-author.js"
+import {xAuthor} from "../lib/ssg/posts/x-author.js"
 
 export const indexPage = (posts: Post[]) => template(
 	import.meta.url,
 	async orb => orb.place(webpage({
-		title: "benev devlog",
 		zone: "/d/",
-		description: "building the future of web games",
+		title: "benev devlog",
+		description: consts.description,
 		main: html`
 			<div class=devlog-index>
 				<ol class=posts>

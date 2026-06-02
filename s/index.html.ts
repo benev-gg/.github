@@ -1,15 +1,17 @@
 
 import {template, html} from "@e280/scute"
+import {consts} from "./consts.js"
 import {webpage} from "./webpage.js"
 import {svgScute} from "./lib/icons/utils/svg-scute.js"
+
 import worldWww from "./lib/icons/tabler/world-www.js"
-import gameController from "./lib/icons/akar/game-controller.js"
 import peopleGroup from "./lib/icons/akar/people-group.js"
+import gameController from "./lib/icons/akar/game-controller.js"
 
 export default template(import.meta.url, async orb => orb.place(
 	webpage({
 		title: "benev.gg",
-		description: "building the future of web games",
+		description: consts.description,
 		zone: "/",
 		main: html`
 			<section class=gamelist>
