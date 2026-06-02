@@ -49,7 +49,7 @@ const renderPost = (orb: Orb) => (post: Post) => {
 							`)}
 						</ul>
 					`}
-					<a class=read x-button=juicy href="${url}">
+					<a class=read x-button href="${url}">
 						read &nbsp; ❯
 					</a>
 				</footer>

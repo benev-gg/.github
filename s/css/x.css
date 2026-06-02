@@ -14,7 +14,7 @@
 		font-weight: bold;
 		text-transform: uppercase;
 
-		color: #fff8;
+		color: var(--prime);
 		background: color-mix(in oklch, transparent, var(--bg));
 		border: var(--thick) solid currentColor;
 		backdrop-filter: blur(var(--blur));
@@ -30,7 +30,17 @@
 		}
 
 		&[x-button="juicy"] {
-			color: var(--prime);
+			opacity: 1;
+			color: black;
+			border: var(--thick) solid var(--prime);
+			background: linear-gradient(
+				to bottom,
+				oklch(from var(--prime) calc(l * 1.5) c h),
+				oklch(from var(--prime) l calc(c * 1.5) h)
+			);
+			&:is(:hover, :focus-visible) {
+				box-shadow: 0 0 1em color-mix(in oklch, transparent, var(--prime));
+			}
 		}
 	}
 
