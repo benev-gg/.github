@@ -11,7 +11,7 @@
 		--thick: 1px;
 		--border: var(--thick) solid color-mix(in oklch, transparent, var(--line) 50%);
 
-		--link: #0ff8;
+		--link: aqua;
 		--select-bg: #f60;
 		--select-color: #ff8;
 

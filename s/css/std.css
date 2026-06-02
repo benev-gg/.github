@@ -21,7 +21,8 @@
 		text-decoration: none;
 
 		&:visited {
-			color: color-mix(in srgb, purple, var(--link) 70%);
+			color: var(--link);
+			/* color: color-mix(in srgb, purple, var(--link) 70%); */
 		}
 
 		&:hover {

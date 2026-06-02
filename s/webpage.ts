@@ -74,10 +74,8 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			</main>
 
 			<footer>
-				<div>
-					<p><a href="https://discord.gg/BnZx2utdev">discord</a></p>
-					<p><a href="https://github.com/benevolent-games">github</a></p>
-				</div>
+				<a href="https://discord.gg/BnZx2utdev">discord</a>
+				<a href="https://github.com/benevolent-games">github</a>
 			</footer>
 		</body>
 	</html>
