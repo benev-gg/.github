@@ -53,7 +53,7 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 				"css/units/devlog-post.css",
 				"css/units/devlog-content.css",
 			].map(href => html`
-				<link rel="stylesheet" href="${orb.hashurl(href, true)}"/>
+				<style data-theme>${orb.inject(href)}</style>
 			`)}
 
 			<script type="module" src="${orb.hashurl('/main.bundle.min.js')}"></script>
