@@ -3,11 +3,9 @@ time = 1780389336622
 author = "chase"
 slug = "benev-is-back"
 title = "benev is back"
-summary = "games should work better"
+summary = "games should be links"
 tags = ["benev"]
 +++
-
-games should be links.
 
 playable in seconds on any device. online with friends. gamepads. splitscreen. let's bring couch co-op back! the web is ready.
 
