@@ -19,7 +19,7 @@ export default template(import.meta.url, async orb => orb.place(
 					<div class=panel>
 						<hgroup>
 							<h2><a href="https://nano.benev.gg/">nano</a></h2>
-							<p>build. survive. automate.</p>
+							<p>build. automate. survive.</p>
 						</hgroup>
 
 						<div>
@@ -35,8 +35,8 @@ export default template(import.meta.url, async orb => orb.place(
 					</div>
 
 					<nav>
-						<a x-button=chill href="https://nano.benev.gg/">learn</a>
-						<a x-button=juicy href="https://nano.benev.gg/#/play/">▶ play</a>
+						<a x-button=chill href="https://github.com/benev-gg/nano">github</a>
+						<a x-button=juicy href="https://nano.benev.gg/">▶ play</a>
 					</nav>
 				</div>
 			</main>

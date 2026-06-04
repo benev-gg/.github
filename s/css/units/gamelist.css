@@ -74,7 +74,9 @@
 			justify-content: end;
 			gap: var(--pad);
 
-			font-size: 1.2em;
+			a {
+				padding: var(--pad) calc(var(--space) * 2);
+			}
 		}
 	}
 
