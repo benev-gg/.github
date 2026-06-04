@@ -6,6 +6,7 @@ import {list} from "../lib/ssg/list.js"
 import {devlogPost} from "./devlog-post.js"
 import {devlogIndex} from "./devlog-index.js"
 import {loadPosts} from "../lib/ssg/posts/load-posts.js"
+import {prepareCatalog} from "../lib/ssg/posts/catalog.js"
 
 export default exe(import.meta.url, async orb => {
 	const posts = await loadPosts("s/d/posts")
@@ -27,5 +28,7 @@ export default exe(import.meta.url, async orb => {
 				{recursive: true},
 			)
 	}
+
+	await orb.io.writeJson("catalog.json", prepareCatalog(posts))
 })
 
