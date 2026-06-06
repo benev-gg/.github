@@ -1,24 +1,24 @@
 
-@layer page {
+@layer app {
 	.devlog-post {
 		container-type: inline-size;
 
 		> img {
 			max-width: 100%;
 			aspect-ratio: 32 / 9;
-			border-radius: var(--round);
-			box-shadow: var(--box-shadow);
+			border-radius: var(--benev-round);
+			box-shadow: var(--benev-box-shadow);
 			background: #0004;
 		}
 
 		.plate {
 			display: flex;
 			flex-direction: column;
-			padding: var(--space);
-			gap: calc(var(--space) * 3);
+			padding: var(--benev-space);
+			gap: calc(var(--benev-space) * 3);
 
 			[x-tags] {
-				padding-bottom: var(--pad);
+				padding-bottom: var(--benev-pad);
 			}
 
 			[x-author] {
@@ -46,12 +46,12 @@
 				flex: 1 1 auto;
 				display: flex;
 				flex-direction: column;
-				gap: var(--pad);
+				gap: var(--benev-pad);
 
 				> div {
 					display: flex;
 					flex-direction: column;
-					gap: var(--pad);
+					gap: var(--benev-pad);
 				}
 			}
 
@@ -74,7 +74,7 @@
 						display: flex;
 						flex-direction: column;
 						align-items: center;
-						gap: var(--pad);
+						gap: var(--benev-pad);
 
 						> time {
 							align-items: center;

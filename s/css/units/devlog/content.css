@@ -1,0 +1,47 @@
+
+@layer app {
+	.devlog-post .content {
+		h1 {
+			font-size: 2.5em;
+			color: var(--benev-intense);
+			a { color: inherit; }
+		}
+
+		h2 {
+			font-size: 1.5em;
+			color: var(--benev-prime);
+		}
+
+		p {
+			max-width: var(--benev-copy-width);
+		}
+
+		p:has(> img) {
+			max-width: 100%;
+		}
+
+		img {
+			max-width: 100%;
+			background: #0004;
+			border-radius: var(--benev-round);
+			box-shadow: var(--benev-box-shadow);
+		}
+
+		blockquote {
+			color: oklch(from currentColor l 0 h / 50%);
+			padding-left: var(--benev-pad);
+			margin-left: var(--benev-pad);
+			font-style: italic;
+			border-left: var(--benev-thick) solid currentColor;
+		}
+
+		hr {
+			border: none;
+			display: block;
+			height: var(--benev-thick);
+			background: oklch(from var(--benev-text) l c h / 25%);
+			margin: var(--benev-space) 0;
+		}
+	}
+}
+

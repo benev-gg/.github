@@ -1,9 +1,9 @@
 
-@layer page {
+@layer app {
 	.gamelist {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space);
+		gap: var(--benev-space);
 
 		&::before, &::after {
 			content: "";
@@ -16,14 +16,14 @@
 	.game {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space);
+		gap: var(--benev-space);
 
-		padding: clamp(var(--space), 5dvw, 6em);
+		padding: clamp(var(--benev-space), 5dvw, 6em);
 
 		background: #0004;
-		border: var(--border);
-		border-radius: var(--round);
-		box-shadow: var(--box-shadow);
+		border: var(--benev-border);
+		border-radius: var(--benev-round);
+		box-shadow: var(--benev-box-shadow);
 
 		> * {
 			flex: 1 1 10em;
@@ -32,24 +32,24 @@
 		.panel {
 			display: flex;
 			flex-direction: column;
-			gap: var(--space);
+			gap: var(--benev-space);
 
 			> hgroup {
 				h2 {
 					font-size: 3em;
-					color: color-mix(in oklch, var(--prime), white);
-					text-shadow: 0 0 1em var(--prime);
+					color: color-mix(in oklch, var(--benev-prime), white);
+					text-shadow: 0 0 1em var(--benev-prime);
 					a { color: inherit; }
 				}
 				p {
 					font-size: 1.4em;
-					color: var(--prime);
+					color: var(--benev-prime);
 					font-weight: bold;
 				}
 			}
 
 			> div {
-				color: var(--intense);
+				color: var(--benev-intense);
 			}
 
 			> ul {
@@ -58,7 +58,7 @@
 				li {
 					display: flex;
 					align-items: center;
-					gap: var(--pad);
+					gap: var(--benev-pad);
 
 					svg {
 						width: 1.5em;
@@ -72,10 +72,10 @@
 			display: flex;
 			align-items: end;
 			justify-content: end;
-			gap: var(--pad);
+			gap: var(--benev-pad);
 
 			a {
-				padding: var(--pad) calc(var(--space) * 2);
+				padding: var(--benev-pad) calc(var(--benev-space) * 2);
 			}
 		}
 	}

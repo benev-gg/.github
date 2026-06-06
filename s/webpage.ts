@@ -1,6 +1,8 @@
 
 import {consts} from "./consts.js"
 import {template, html, socialCard, Html} from "@e280/scute"
+import {basisCssText} from "../../web/x/css/basis.css-text.js"
+import {benevCoreCssText} from "../../web/x/css/benev-core.css-text.js"
 
 export type PageOptions = {
 	title: string
@@ -14,8 +16,8 @@ export type PageOptions = {
 
 const navlink = (options: PageOptions, zone: string, text: string) => (
 	(zone === options.zone)
-		? html`<a href="${zone}" data-active>${text}</a>`
-		: html`<a href="${zone}">${text}</a>`
+		? html`<a benev-link href="${zone}" data-active>${text}</a>`
+		: html`<a benev-link href="${zone}">${text}</a>`
 )
 
 export const webpage = (options: PageOptions) => template(import.meta.url, async orb => html`
@@ -40,52 +42,63 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			})}
 
 			<link rel="icon" href="${orb.hashurl(consts.favicon, true)}"/>
-			<style>@layer base{html{background:#000}}</style>
-
-			${[
-				"css/layers.css",
-				"css/vars.css",
-				"css/std.css",
-				"css/x.css",
-				"css/page.css",
-				"css/units/gamelist.css",
-				"css/units/devlog-index.css",
-				"css/units/devlog-post.css",
-				"css/units/devlog-content.css",
-			].map(href => html`
-				<style data-theme>${orb.inject(href)}</style>
-			`)}
+			<style data-theme>
+				@layer base, basis, benev, x, app;
+				@layer base {
+					:root {
+						color: #aaa;
+						background: #000;
+					}
+				}
+				${html.raw(basisCssText)}
+				${html.raw(benevCoreCssText)}
+				${orb.inject("css/x.css")}
+				${orb.inject("css/app.css")}
+				${orb.inject("css/units/devlog/content.css")}
+				${orb.inject("css/units/devlog/listing.css")}
+				${orb.inject("css/units/devlog/post.css")}
+				${orb.inject("css/units/gamelist.css")}
+			</style>
 
 			<script type="module" src="${orb.hashurl('/main.bundle.min.js')}"></script>
 
 			${options.head}
 		</head>
 		<body>
-			<header>
-				<a href="/">
-					<img class=logo src="${orb.hashurl(consts.favicon, true)}" alt=""/>
-				</a>
-
-				<div>
-					<h1>
-						<a href="/">benev.gg</a>
-					</h1>
-					<p>${consts.description}</p>
-				</div>
-
-				<nav>
+			<benev-shell>
+				<nav slot=nav>
 					${navlink(options, "/", "games")}
 					${navlink(options, "/d/", "devlog")}
 				</nav>
-			</header>
 
-			${options.content}
+				${options.content}
 
-			<footer>
-				<a href="https://discord.gg/BnZx2utdev">discord</a>
-				<a href="https://github.com/benevolent-games">github</a>
-			</footer>
+				<footer benev-slice>
+					<a href="https://discord.gg/BnZx2utdev">discord</a>
+					<a href="https://github.com/benevolent-games">github</a>
+				</footer>
+			</benev-shell>
 		</body>
 	</html>
 `)
+
+// <header>
+// 	<a href="/">
+// 		<img class=logo src="${orb.hashurl(consts.favicon, true)}" alt=""/>
+// 	</a>
+//
+// 	<div>
+// 		<h1>
+// 			<a href="/">benev.gg</a>
+// 		</h1>
+// 		<p>${consts.description}</p>
+// 	</div>
+//
+// 	<nav>
+// 		${navlink(options, "/", "games")}
+// 		${navlink(options, "/d/", "devlog")}
+// 	</nav>
+// </header>
+//
+// ${options.content}
 

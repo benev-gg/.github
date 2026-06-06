@@ -4,15 +4,15 @@ import {cp} from "fs/promises"
 import {exe, Orb} from "@e280/scute"
 import {list} from "../lib/ssg/list.js"
 import {devlogPost} from "./devlog-post.js"
-import {devlogIndex} from "./devlog-index.js"
+import {devlogListing} from "./devlog-listing.js"
 import {loadPosts} from "../lib/ssg/posts/load-posts.js"
 import {prepareCatalog} from "../lib/ssg/posts/catalog.js"
 
 export default exe(import.meta.url, async orb => {
 	const posts = await loadPosts("s/d/posts")
-	const indexContent = await orb.place(devlogIndex(posts))
+	const listingContent = await orb.place(devlogListing(posts))
 
-	await orb.io.write("index.html", await indexContent.render())
+	await orb.io.write("index.html", await listingContent.render())
 
 	for (const post of posts) {
 		const {files, dirs} = await list(post.dir)

@@ -1,11 +1,11 @@
 
-@layer page {
-	.devlog-index {
+@layer app {
+	.devlog-listing {
 		container-type: inline-size;
 
 		display: flex;
 		flex-direction: column;
-		gap: var(--space);
+		gap: var(--benev-space);
 
 		&::before, &::after {
 			content: "";
@@ -20,15 +20,15 @@
 		}
 
 		[x-author] {
-			padding: 0 var(--pad);
-			padding-bottom: var(--pad);
+			padding: 0 var(--benev-pad);
+			padding-bottom: var(--benev-pad);
 
 			> div {
 				flex: 1 0 auto;
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-				gap: var(--pad);
+				gap: var(--benev-pad);
 			}
 		}
 
@@ -37,16 +37,16 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			gap: var(--space);
+			gap: var(--benev-space);
 
 			min-height: calc(100cqw * 9 / 32);
 			height: auto;
-			padding: var(--space);
+			padding: var(--benev-space);
 
 			background: #0006;
-			border-radius: var(--round);
-			box-shadow: var(--box-shadow);
-			border-top: var(--border);
+			border-radius: var(--benev-round);
+			box-shadow: var(--benev-box-shadow);
+			border-top: var(--benev-border);
 
 			header {
 				display: flex;
@@ -54,13 +54,13 @@
 				align-items: start;
 
 				h2 {
-					color: var(--intense);
+					color: var(--benev-intense);
 					font-size: 1.5em;
 					a { color: inherit; }
 				}
 
 				p {
-					color: var(--prime);
+					color: var(--benev-prime);
 					font-size: 1em;
 					font-weight: bold;
 				}
@@ -68,7 +68,7 @@
 				:is(h2, p) {
 					display: inline;
 					background: #0004;
-					backdrop-filter: blur(var(--blur));
+					backdrop-filter: blur(var(--benev-blur));
 					padding: 0.1rem 0.5rem;
 					border-radius: 0.3rem;
 					box-decoration-break: clone;
@@ -81,17 +81,17 @@
 				flex-wrap: wrap;
 				justify-content: space-between;
 				align-items: end;
-				gap: var(--space);
+				gap: var(--benev-space);
 			}
 		}
 
 		@container (width > 40em) {
 			.posts {
-				gap: var(--space);
+				gap: var(--benev-space);
 			}
 
 			article {
-				gap: var(--space);
+				gap: var(--benev-space);
 
 				> section {
 					h2 { font-size: 2em; }
@@ -123,7 +123,7 @@
 				content: "";
 				display: block;
 				flex: 1 1 auto;
-				border-right: 3px solid var(--line);
+				border-right: 3px solid var(--benev-line);
 			}
 		}
 	}

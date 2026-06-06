@@ -6,14 +6,14 @@ import {Post} from "../lib/ssg/posts/types.js"
 import {xTags} from "../lib/ssg/posts/x-tags.js"
 import {xAuthor} from "../lib/ssg/posts/x-author.js"
 
-export const devlogIndex = (posts: Post[]) => template(
+export const devlogListing = (posts: Post[]) => template(
 	import.meta.url,
 	async orb => orb.place(webpage({
 		zone: "/d/",
 		title: "benev devlog",
 		description: consts.description,
 		content: html`
-			<main class=devlog-index>
+			<main class=devlog-listing>
 				${posts.map(renderPost(orb))}
 			</main>
 		`,

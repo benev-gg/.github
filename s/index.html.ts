@@ -14,7 +14,7 @@ export default template(import.meta.url, async orb => orb.place(
 		description: consts.description,
 		zone: "/",
 		content: html`
-			<main class=gamelist>
+			<main class=gamelist benev-slice>
 				<div class="game nano">
 					<div class=panel>
 						<hgroup>
@@ -35,8 +35,8 @@ export default template(import.meta.url, async orb => orb.place(
 					</div>
 
 					<nav>
-						<a x-button=chill href="https://github.com/benev-gg/nano">github</a>
-						<a x-button=juicy href="https://nano.benev.gg/">▶ play</a>
+						<a benev-button href="https://github.com/benev-gg/nano">github</a>
+						<a benev-button=juicy href="https://nano.benev.gg/">▶ play</a>
 					</nav>
 				</div>
 			</main>
