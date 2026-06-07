@@ -15,49 +15,42 @@
 			var(--benev-bg);
 	}
 
-	benev-shell {
-		> nav {
-			display: flex;
-			justify-content: end;
-			gap: var(--benev-space);
+	body > main {
+		flex: 1 1 auto;
+	}
 
-			a {
-				position: relative;
-				color: var(--benev-prime);
-				padding: 0.2em;
-				font-size: 1.2em;
+	body > footer {
+		display: flex;
+		gap: var(--benev-space);
+		justify-content: end;
+		padding: var(--benev-space);
+		--benev-link: #fffa;
+	}
 
-				&[data-active] {
-					text-shadow: 0 0 0.5em currentColor;
+	benev-header {
+		a {
+			position: relative;
+			color: var(--benev-prime);
+			padding: 0.2em;
+			font-size: 1.2em;
 
-					&::after {
-						content: "•";
-						display: block;
-						position: absolute;
-						top: 100%;
-						left: 0;
-						right: 0;
-						line-height: 0.3em;
-						text-align: center;
-						text-shadow:
-							0 0 0.5em currentColor,
-							0 0 0.5em currentColor;
-					}
+			&[data-active] {
+				text-shadow: 0 0 0.5em currentColor;
+
+				&::after {
+					content: "•";
+					display: block;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					right: 0;
+					line-height: 0.3em;
+					text-align: center;
+					text-shadow:
+						0 0 0.5em currentColor,
+						0 0 0.5em currentColor;
 				}
 			}
-		}
-
-		> main {
-			flex: 1 1 auto;
-			padding-top: var(--benev-headroom);
-		}
-
-		> footer {
-			display: flex;
-			gap: var(--benev-space);
-			justify-content: end;
-			padding: var(--benev-space);
-			--benev-link: #fffa;
 		}
 	}
 

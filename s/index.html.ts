@@ -20,7 +20,7 @@ export default template(import.meta.url, async orb => orb.place(
 					<p>${consts.description}</p>
 				</header>
 
-				<a benev-cardlink class="game nano" href="https://nano.benev.gg/">
+				<a benev-cardlink class="game nano" href="https://nano.benev.gg/" draggable=false>
 					<div class=panel>
 						<hgroup>
 							<h2>nano</h2>

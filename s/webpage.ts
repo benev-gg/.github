@@ -63,19 +63,19 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			${options.head}
 		</head>
 		<body>
-			<benev-shell>
-				<nav slot=nav>
-					${navlink(options, "/", "games")}
-					${navlink(options, "/d/", "devlog")}
-				</nav>
+			<benev-menu></benev-menu>
 
-				${options.content}
+			<benev-header>
+				${navlink(options, "/", "games")}
+				${navlink(options, "/d/", "devlog")}
+			</benev-header>
 
-				<footer benev-slice>
-					<a href="https://discord.gg/BnZx2utdev">discord</a>
-					<a href="https://github.com/benev-gg">github</a>
-				</footer>
-			</benev-shell>
+			${options.content}
+
+			<footer benev-slice>
+				<a href="https://discord.gg/BnZx2utdev">discord</a>
+				<a href="https://github.com/benev-gg">github</a>
+			</footer>
 		</body>
 	</html>
 `)

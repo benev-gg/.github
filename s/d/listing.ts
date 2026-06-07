@@ -31,7 +31,7 @@ const renderPost = (orb: Orb) => (post: Post) => {
 		<article class=post benev-slice>
 			${xAuthor(post)}
 
-			<a class=card benev-cardlink href="${url}" style="${style}">
+			<a class=card benev-cardlink href="${url}" style="${style}" draggable=false>
 				<header>
 					<h2>${post.title}</h2>
 					<p>${post.summary}</p>

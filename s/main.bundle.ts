@@ -2,7 +2,7 @@
 import {html} from "lit"
 import {dom} from "@e280/sly"
 import {errorString} from "@e280/stz"
-import {Shell, Loader, shellComponent, loaderComponent} from "@benev/web"
+import {Shell, Loader, headerComponent, menuComponent, loaderComponent} from "@benev/web"
 
 const shell = new Shell()
 const loader = new Loader({
@@ -11,7 +11,8 @@ const loader = new Loader({
 })
 
 dom.register({
-	BenevShell: shellComponent(shell),
+	BenevHeader: headerComponent(shell),
+	BenevMenu: menuComponent(shell),
 	BenevLoader: loaderComponent(loader),
 })
 
