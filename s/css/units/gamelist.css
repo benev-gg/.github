@@ -6,6 +6,7 @@
 		align-items: center;
 		padding: 0 clamp(var(--benev-space), 5dvw, 6em);
 		margin-bottom: calc(var(--benev-space) * 3);
+		gap: var(--benev-pad);
 
 		h1 {
 			font-size: 3em;
