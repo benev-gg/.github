@@ -60,7 +60,6 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 				${orb.inject("css/units/gamelist.css")}
 			</style>
 
-
 			${options.head}
 		</head>
 		<body>
@@ -74,7 +73,7 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 
 				<footer benev-slice>
 					<a href="https://discord.gg/BnZx2utdev">discord</a>
-					<a href="https://github.com/benevolent-games">github</a>
+					<a href="https://github.com/benev-gg">github</a>
 				</footer>
 			</benev-shell>
 		</body>
