@@ -1,49 +1,5 @@
 
 @layer x {
-	[x-button] {
-		opacity: 0.8;
-		transition: transform var(--anim) ease;
-
-		display: inline-block;
-		padding: var(--pad) var(--space);
-
-		text-decoration: none;
-		border: none;
-
-		border-radius: var(--round);
-		font-weight: bold;
-		text-transform: uppercase;
-
-		color: var(--prime);
-		background: color-mix(in oklch, transparent, var(--bg));
-		border: var(--thick) solid currentColor;
-		backdrop-filter: blur(var(--blur));
-
-		&:is(:hover, :focus-visible) {
-			opacity: 1;
-			box-shadow: 0 0 1em color-mix(in oklch, transparent, currentColor);
-			transform: translateY(-0.1em);
-		}
-
-		&:active {
-			opacity: 0.8;
-		}
-
-		&[x-button="juicy"] {
-			opacity: 1;
-			color: black;
-			border: var(--thick) solid var(--prime);
-			background: linear-gradient(
-				to bottom,
-				oklch(from var(--prime) calc(l * 1.5) c h),
-				oklch(from var(--prime) l calc(c * 1.5) h)
-			);
-			&:is(:hover, :focus-visible) {
-				box-shadow: 0 0 2em color-mix(in oklch, transparent, var(--prime));
-			}
-		}
-	}
-
 	[x-author] {
 		display: flex;
 		flex-direction: row;

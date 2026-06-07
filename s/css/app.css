@@ -47,10 +47,8 @@
 			display: flex;
 			gap: var(--benev-space);
 			justify-content: end;
-			--link: #fffa;
-
-			border-top: var(--benev-thin) solid var(--benev-line);
-			border-radius: var(--benev-round) var(--benev-round) 0 0;
+			padding: var(--benev-space);
+			--benev-link: #fffa;
 		}
 	}
 

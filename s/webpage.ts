@@ -41,6 +41,7 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 				image: consts.origin + (options.image ?? consts.favicon),
 			})}
 
+			<script type="module" src="${orb.hashurl('/main.bundle.min.js')}"></script>
 			<link rel="icon" href="${orb.hashurl(consts.favicon, true)}"/>
 			<style data-theme>
 				@layer base, basis, benev, x, app;
@@ -60,7 +61,6 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 				${orb.inject("css/units/gamelist.css")}
 			</style>
 
-			<script type="module" src="${orb.hashurl('/main.bundle.min.js')}"></script>
 
 			${options.head}
 		</head>
@@ -74,31 +74,11 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 				${options.content}
 
 				<footer benev-slice>
-					<a href="https://discord.gg/BnZx2utdev">discord</a>
-					<a href="https://github.com/benevolent-games">github</a>
+					<a benev-link href="https://discord.gg/BnZx2utdev">discord</a>
+					<a benev-link href="https://github.com/benevolent-games">github</a>
 				</footer>
 			</benev-shell>
 		</body>
 	</html>
 `)
-
-// <header>
-// 	<a href="/">
-// 		<img class=logo src="${orb.hashurl(consts.favicon, true)}" alt=""/>
-// 	</a>
-//
-// 	<div>
-// 		<h1>
-// 			<a href="/">benev.gg</a>
-// 		</h1>
-// 		<p>${consts.description}</p>
-// 	</div>
-//
-// 	<nav>
-// 		${navlink(options, "/", "games")}
-// 		${navlink(options, "/d/", "devlog")}
-// 	</nav>
-// </header>
-//
-// ${options.content}
 
