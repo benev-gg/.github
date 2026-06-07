@@ -1,8 +1,7 @@
 
-import {consts} from "./consts.js"
+import {benevCssText} from "@benev/web/ssg"
 import {template, html, socialCard, Html} from "@e280/scute"
-import {basisCssText} from "../../web/x/css/basis.css-text.js"
-import {benevCoreCssText} from "../../web/x/css/benev-core.css-text.js"
+import {consts} from "./consts.js"
 
 export type PageOptions = {
 	title: string
@@ -22,7 +21,7 @@ const navlink = (options: PageOptions, zone: string, text: string) => (
 
 export const webpage = (options: PageOptions) => template(import.meta.url, async orb => html`
 	<!doctype html>
-	<html>
+	<html benev>
 		<head>
 			<meta charset="utf-8"/>
 			<meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -51,8 +50,7 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 						background: #000;
 					}
 				}
-				${html.raw(basisCssText)}
-				${html.raw(benevCoreCssText)}
+				${html.raw(benevCssText)}
 				${orb.inject("css/x.css")}
 				${orb.inject("css/app.css")}
 				${orb.inject("css/units/devlog/listing.css")}

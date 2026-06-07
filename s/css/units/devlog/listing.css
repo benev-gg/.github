@@ -22,10 +22,14 @@
 		}
 
 		.card {
+			flex: 1 1 20em;
+			container-type: inline-size;
+		}
+
+		.card a {
 			font: inherit;
 			text-decoration: inherit;
 
-			flex: 1 1 20em;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
