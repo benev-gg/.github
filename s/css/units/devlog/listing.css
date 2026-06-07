@@ -14,7 +14,7 @@
 
 		&::after { flex: 3 1 auto; }
 
-		article {
+		.post {
 			display: flex;
 			flex-wrap: wrap;
 		}
@@ -32,7 +32,10 @@
 			}
 		}
 
-		section {
+		.card {
+			font: inherit;
+			text-decoration: inherit;
+
 			flex: 1 1 20em;
 			display: flex;
 			flex-direction: column;
@@ -55,13 +58,13 @@
 
 				h2 {
 					color: var(--benev-intense);
-					font-size: 1.5em;
+					font-size: 2em;
 					a { color: inherit; }
 				}
 
 				p {
 					color: var(--benev-prime);
-					font-size: 1em;
+					font-size: 1.5em;
 					font-weight: bold;
 				}
 

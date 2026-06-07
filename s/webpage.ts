@@ -16,8 +16,8 @@ export type PageOptions = {
 
 const navlink = (options: PageOptions, zone: string, text: string) => (
 	(zone === options.zone)
-		? html`<a benev-link href="${zone}" data-active>${text}</a>`
-		: html`<a benev-link href="${zone}">${text}</a>`
+		? html`<a href="${zone}" data-active>${text}</a>`
+		: html`<a href="${zone}">${text}</a>`
 )
 
 export const webpage = (options: PageOptions) => template(import.meta.url, async orb => html`
@@ -73,8 +73,8 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 				${options.content}
 
 				<footer benev-slice>
-					<a benev-link href="https://discord.gg/BnZx2utdev">discord</a>
-					<a benev-link href="https://github.com/benevolent-games">github</a>
+					<a href="https://discord.gg/BnZx2utdev">discord</a>
+					<a href="https://github.com/benevolent-games">github</a>
 				</footer>
 			</benev-shell>
 		</body>

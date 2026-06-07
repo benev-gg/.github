@@ -31,21 +31,19 @@ const renderPost = (orb: Orb) => (post: Post) => {
 		<article class=post benev-slice>
 			${xAuthor(post)}
 
-			<section style="${style}">
+			<a class=card href="${url}" style="${style}">
 				<header>
-					<h2>
-						<a href="${url}">${post.title}</a>
-					</h2>
+					<h2>${post.title}</h2>
 					<p>${post.summary}</p>
 				</header>
 
 				<footer>
 					${xTags(post.tags)}
-					<a class=read benev-button href="${url}">
+					<button class=read>
 						read &nbsp; ❯
-					</a>
+					</button>
 				</footer>
-			</section>
+			</a>
 		</article>
 	`
 }
