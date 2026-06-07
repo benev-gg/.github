@@ -15,6 +15,11 @@ export default template(import.meta.url, async orb => orb.place(
 		zone: "/",
 		content: html`
 			<main class=gamelist benev-slice x-spacious>
+				<header class=titlecard>
+					<h1>${consts.domain}</h1>
+					<p>${consts.description}</p>
+				</header>
+
 				<a benev-cardlink class="game nano" href="https://nano.benev.gg/">
 					<div class=panel>
 						<hgroup>

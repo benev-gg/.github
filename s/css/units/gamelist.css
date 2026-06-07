@@ -1,5 +1,24 @@
 
 @layer app {
+	.titlecard {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 clamp(var(--benev-space), 5dvw, 6em);
+		margin-bottom: calc(var(--benev-space) * 3);
+
+		h1 {
+			font-size: 3em;
+			color: var(--benev-prime);
+			text-shadow: 0 0 1em var(--benev-prime);
+			font-weight: normal;
+		}
+
+		p {
+			font-size: 1.4em;
+		}
+	}
+
 	.game {
 		display: flex;
 		flex-wrap: wrap;
@@ -24,9 +43,8 @@
 			> hgroup {
 				h2 {
 					font-size: 3em;
-					color: color-mix(in oklch, var(--benev-prime), white);
+					color: var(--benev-intense);
 					text-shadow: 0 0 1em var(--benev-prime);
-					a { color: inherit; }
 				}
 				p {
 					font-size: 1.4em;
@@ -35,12 +53,9 @@
 				}
 			}
 
-			> div {
-				color: var(--benev-intense);
-			}
-
 			> ul {
 				list-style: none;
+				color: oklch(from var(--benev-prime) l c h / 50%);
 
 				li {
 					display: flex;
@@ -61,7 +76,7 @@
 			justify-content: end;
 			gap: var(--benev-pad);
 
-			a {
+			button {
 				padding: var(--benev-pad) calc(var(--benev-space) * 2);
 			}
 		}
