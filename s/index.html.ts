@@ -14,7 +14,7 @@ export default template(import.meta.url, async orb => orb.place(
 		description: consts.description,
 		zone: "/",
 		content: html`
-			<main class=gamelist benev-slice>
+			<main class=gamelist benev-slice x-spacious>
 				<div class="game nano">
 					<div class=panel>
 						<hgroup>

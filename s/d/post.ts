@@ -28,7 +28,7 @@ export const devlogPost = (post: Post) => template(
 			`,
 
 			content: html`
-				<main class=devlog-post benev-slice>
+				<main class=devlog-post benev-slice x-spacious>
 					${post.image
 						? html`<img src="${imageUrl}" alt=""/>`
 						: null}

@@ -1,18 +1,5 @@
 
 @layer app {
-	.gamelist {
-		display: flex;
-		flex-direction: column;
-		gap: var(--benev-space);
-
-		&::before, &::after {
-			content: "";
-			flex: 1 1 auto;
-		}
-
-		&::after { flex: 3 1 auto; }
-	}
-
 	.game {
 		display: flex;
 		flex-wrap: wrap;

@@ -13,7 +13,7 @@ export const devlogListing = (posts: Post[]) => template(
 		title: "benev devlog",
 		description: consts.description,
 		content: html`
-			<main class=devlog-listing>
+			<main class=devlog-listing x-spacious>
 				${posts.map(renderPost(orb))}
 			</main>
 		`,
