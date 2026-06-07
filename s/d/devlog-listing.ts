@@ -28,7 +28,7 @@ const renderPost = (orb: Orb) => (post: Post) => {
 	const style = `background: url('${imageUrl}') center center / cover;`
 
 	return html`
-		<article class=post>
+		<article class=post benev-slice>
 			${xAuthor(post)}
 
 			<section style="${style}">
@@ -41,7 +41,7 @@ const renderPost = (orb: Orb) => (post: Post) => {
 
 				<footer>
 					${xTags(post.tags)}
-					<a class=read x-button href="${url}">
+					<a class=read benev-button href="${url}">
 						read &nbsp; ❯
 					</a>
 				</footer>

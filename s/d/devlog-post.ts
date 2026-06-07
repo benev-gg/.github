@@ -28,7 +28,7 @@ export const devlogPost = (post: Post) => template(
 			`,
 
 			content: html`
-				<main class=devlog-post>
+				<main class=devlog-post benev-slice>
 					${post.image
 						? html`<img src="${imageUrl}" alt=""/>`
 						: null}
@@ -36,7 +36,7 @@ export const devlogPost = (post: Post) => template(
 					<article class=plate>
 						${xAuthor(post)}
 
-						<section class=content>
+						<section benev-prose>
 							<header>
 								${xTags(post.tags)}
 								<h1><a href=".">${post.title}</a></h1>

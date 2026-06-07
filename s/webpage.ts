@@ -55,7 +55,6 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 				${html.raw(benevCoreCssText)}
 				${orb.inject("css/x.css")}
 				${orb.inject("css/app.css")}
-				${orb.inject("css/units/devlog/content.css")}
 				${orb.inject("css/units/devlog/listing.css")}
 				${orb.inject("css/units/devlog/post.css")}
 				${orb.inject("css/units/gamelist.css")}

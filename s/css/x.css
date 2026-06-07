@@ -5,21 +5,21 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
-		gap: var(--pad);
+		gap: var(--benev-pad);
 		width: 100%;
 
 		> img {
 			width: 3em;
 			height: 3em;
 			border-radius: 5em;
-			border: 2px solid var(--prime);
+			border: 2px solid var(--benev-prime);
 		}
 
 		> div {
 			> span {
 				font-size: 1.2em;
 				font-weight: bold;
-				color: var(--prime);
+				color: var(--benev-prime);
 			}
 
 			> time {
@@ -38,13 +38,13 @@
 		list-style: none;
 		display: flex;
 		flex-wrap: wrap;
-		gap: calc(var(--pad) / 2);
+		gap: calc(var(--benev-pad) / 2);
 
 		> li {
 			border-radius: 2em;
-			border: var(--border);
+			border: var(--benev-border);
 			padding: 0.1em 0.4em;
-			background: color-mix(in oklch, transparent, var(--bg) 50%);
+			background: color-mix(in oklch, transparent, var(--benev-bg) 50%);
 		}
 	}
 }
