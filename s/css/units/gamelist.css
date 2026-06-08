@@ -25,7 +25,7 @@
 		flex-wrap: wrap;
 		gap: var(--benev-space);
 
-		padding: clamp(var(--benev-space), 5dvw, 6em);
+		padding: 2em clamp(var(--benev-space), 5dvw, 6em);
 
 		background: #0004;
 		border: var(--benev-border);
