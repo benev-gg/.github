@@ -12,6 +12,7 @@
 		"s"
 	],
 	"scripts": {
+		"link": "npm link ../web",
 		"build": "rm -rf x && mkdir x && tsc && scute -v",
 		"dev": "octo 'tsc -w' 'scute -wv' 'hottie x'",
 		"test": "exit 0",

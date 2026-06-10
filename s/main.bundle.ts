@@ -2,7 +2,8 @@
 import {dom} from "@e280/sly"
 import {setup} from "@benev/web"
 
-dom.register(setup().components)
+const benev = await setup()
+dom.register(benev.elements)
 
 console.log("👼")
 
