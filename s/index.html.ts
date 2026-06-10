@@ -24,12 +24,11 @@ export default template(import.meta.url, async orb => orb.place(
 					<div class=panel>
 						<hgroup>
 							<h2>nano</h2>
-							<p>build. automate. survive.</p>
+							<p>online robot warfare.</p>
 						</hgroup>
 
 						<div>
-							<p>fight for survival in a massive online arena.</p>
-							<p>build your base. upgrade your robot.</p>
+							<p>jump into fast-paced combat instantly in-browser.</p>
 						</div>
 
 						<ul>
