@@ -1,5 +1,5 @@
 +++
-time = 1781756389581
+time = 1781771237480
 author = "chase"
 slug = "babylon-lite"
 title = "babylon lite"
@@ -8,7 +8,7 @@ tags = ["dev", "tutorial"]
 +++
 
 [babylon lite](https://www.babylonjs.com/lite/) came out recently.  
-as i'm now wiring it into [nano](https://nano.benev.gg/), i thought i'd make this tutorial.
+while i'm wiring it into [nano](https://nano.benev.gg/), i thought i'd make this tutorial.
 
 ### install lite via npm
 

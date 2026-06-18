@@ -1,15 +1,13 @@
 +++
-time = 1780389336622
+time = 1781771205030
 author = "chase"
 slug = "benev-is-back"
 title = "benev is back"
-summary = "games should be links"
+summary = "let's make great web games"
 tags = ["benev"]
 +++
 
-playable in seconds on any device. online with friends. gamepads. splitscreen. let's bring couch co-op back! the web is ready.
+let's make games worth playing together. online with friends. invite links. loading in seconds on any device. offline too. get your gamepads. we're bringing couch co-op back.
 
-lonnie and i have been grinding for years, learning how to build this stuff. it's been hard, but we haven't given up. but lately, something feels different.
-
-maybe we're ready this time.
+lonnie and i have spent years trying to make this real. it's been hard. we've learned a lot. the web is ready. maybe this time, we're ready too ☕️
 
