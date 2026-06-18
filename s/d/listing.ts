@@ -22,10 +22,15 @@ export const devlogListing = (posts: Post[]) => template(
 
 const renderPost = (orb: Orb) => (post: Post) => {
 	const url = post.slug + "/"
+
 	const imageUrl = post.image
 		? orb.url(url + post.image)
 		: orb.url("/assets/bannerbg.webp", true)
-	const style = `background: url('${imageUrl}') center center / cover;`
+
+	const style = `
+		background: url('${imageUrl}') center center / cover;
+		background-clip: padding-box;
+	`
 
 	return html`
 		<article class=post benev-slice>

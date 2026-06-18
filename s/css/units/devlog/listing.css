@@ -63,8 +63,9 @@
 
 				:is(h2, p) {
 					display: inline;
-					background: #0004;
-					backdrop-filter: blur(var(--benev-blur));
+					background: #0006;
+					backdrop-filter: blur(0.5em);
+					box-shadow: var(--benev-box-shadow);
 					padding: 0.1rem 0.5rem;
 					border-radius: 0.3rem;
 					box-decoration-break: clone;
@@ -78,6 +79,12 @@
 				justify-content: space-between;
 				align-items: end;
 				gap: var(--benev-space);
+			}
+
+			&:hover, &:focus-visible {
+				h2 {
+					text-decoration: underline;
+				}
 			}
 		}
 

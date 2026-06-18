@@ -42,16 +42,24 @@
 				}
 			}
 
-			[benev-prose] {
+			.sector {
 				flex: 1 1 auto;
 				display: flex;
 				flex-direction: column;
 				gap: var(--benev-pad);
+				min-width: 0;
 
-				> div {
-					display: flex;
-					flex-direction: column;
-					gap: var(--benev-pad);
+				> header {
+					gap: 0;
+					margin-bottom: 1em;
+
+					h1, h2 {
+						margin-top: 0;
+					}
+
+					> ul {
+						padding: 0;
+					}
 				}
 			}
 

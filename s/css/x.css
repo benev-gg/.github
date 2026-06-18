@@ -47,17 +47,22 @@
 	}
 
 	[x-tags] {
-		opacity: 0.8;
+		font-size: 0.8em;
+		font-family: monospace;
+
 		list-style: none;
 		display: flex;
 		flex-wrap: wrap;
 		gap: calc(var(--benev-pad) / 2);
 
 		> li {
+			color: oklch(from var(--benev-prime) l c h / 50%);
 			border-radius: 2em;
 			border: var(--benev-border);
 			padding: 0.1em 0.4em;
 			background: color-mix(in oklch, transparent, var(--benev-bg) 50%);
+			backdrop-filter: blur(0.5em);
+			box-shadow: var(--benev-box-shadow);
 		}
 	}
 }

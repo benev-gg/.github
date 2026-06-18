@@ -36,14 +36,14 @@ export const devlogPost = (post: Post) => template(
 					<article class=plate>
 						${xAuthor(post)}
 
-						<section benev-prose>
-							<header>
+						<section class=sector>
+							<header benev-prose>
 								${xTags(post.tags)}
 								<h1><a href=".">${post.title}</a></h1>
 								<h2>${post.summary}</h2>
 							</header>
 
-							<div>
+							<div benev-prose>
 								${html.raw(post.content)}
 							</div>
 						</section>
