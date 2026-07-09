@@ -22,19 +22,19 @@
 		"esbuild@0.28.1": true
 	},
 	"dependencies": {
-		"@e280/sly": "^0.4.0",
-		"@e280/strata": "^0.4.0",
-		"@e280/stz": "^0.3.0",
+		"@e280/sly": "^0.4.1",
+		"@e280/strata": "^0.4.1",
+		"@e280/stz": "^0.3.1",
 		"lit": "^3.3.3",
 		"micromark": "^4.0.2"
 	},
 	"devDependencies": {
-		"@e280/hottie": "^0.1.1",
-		"@e280/octo": "^0.1.1",
+		"@e280/hottie": "^0.1.2",
+		"@e280/octo": "^0.1.2",
 		"@e280/scute": "^0.4.1",
-		"@types/node": "^25.9.3",
-		"smol-toml": "^1.6.1",
-		"typescript": "^6.0.3"
+		"@types/node": "^26.1.1",
+		"smol-toml": "^1.7.0",
+		"typescript": "^7.0.2"
 	},
 	"homepage": "https://github.com/benev-gg/.github#readme",
 	"repository": {
