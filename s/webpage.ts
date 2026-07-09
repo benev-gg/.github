@@ -61,7 +61,9 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			${options.head}
 		</head>
 		<body>
-			<benev-menu></benev-menu>
+			<benev-menu>
+				<p>benev menu coming soon</p>
+			</benev-menu>
 
 			<benev-header>
 				${navlink(options, "/", "games")}
