@@ -1,7 +1,7 @@
 
 import {benevCssText} from "@benev/web/ssg"
 import {template, html, socialCard, Html} from "@e280/scute"
-import {consts} from "./consts.js"
+import {consts} from "../../consts.js"
 
 export type PageOptions = {
 	title: string
@@ -51,11 +51,11 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 					}
 				}
 				${html.raw(benevCssText)}
-				${orb.inject("css/x.css")}
-				${orb.inject("css/app.css")}
-				${orb.inject("css/units/devlog/listing.css")}
-				${orb.inject("css/units/devlog/post.css")}
-				${orb.inject("css/units/gamelist.css")}
+				${orb.inject("../../css/x.css")}
+				${orb.inject("../../css/app.css")}
+				${orb.inject("../../css/units/devlog/listing.css")}
+				${orb.inject("../../css/units/devlog/post.css")}
+				${orb.inject("../../css/units/gamelist.css")}
 			</style>
 
 			${options.head}

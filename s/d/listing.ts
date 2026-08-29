@@ -1,7 +1,7 @@
 
 import {html, Orb, template} from "@e280/scute"
 import {consts} from "../consts.js"
-import {webpage} from "../webpage.js"
+import {webpage} from "../lib/ssg/webpage.js"
 import {Post} from "../lib/ssg/posts/types.js"
 import {xTags} from "../lib/ssg/posts/x-tags.js"
 import {xAuthor} from "../lib/ssg/posts/x-author.js"

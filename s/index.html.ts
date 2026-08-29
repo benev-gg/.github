@@ -1,7 +1,7 @@
 
 import {template, html} from "@e280/scute"
 import {consts} from "./consts.js"
-import {webpage} from "./webpage.js"
+import {webpage} from "./lib/ssg/webpage.js"
 import {svgScute} from "./lib/icons/utils/svg-scute.js"
 
 import worldWww from "./lib/icons/tabler/world-www.js"
