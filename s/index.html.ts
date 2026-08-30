@@ -12,7 +12,7 @@ export default template(import.meta.url, async orb => orb.place(
 	webpage({
 		title: "benev.gg",
 		description: consts.description,
-		zone: "/",
+		zone: "games",
 		content: html`
 			<main class=gamelist benev-slice x-spacious>
 				<header class=titlecard>

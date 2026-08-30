@@ -9,7 +9,7 @@ import {xAuthor} from "../lib/ssg/posts/x-author.js"
 export const devlogListing = (posts: Post[]) => template(
 	import.meta.url,
 	async orb => orb.place(webpage({
-		zone: "/d/",
+		zone: "devlog",
 		title: "benev devlog",
 		description: consts.description,
 		content: html`

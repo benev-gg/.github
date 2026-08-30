@@ -1,23 +1,17 @@
 
-import {benevCssText} from "@benev/web/ssg"
+import {benevCssText, topNav, Zone} from "@benev/web/ssg"
 import {template, html, socialCard, Html} from "@e280/scute"
 import {consts} from "../../consts.js"
 
 export type PageOptions = {
 	title: string
 	description: string
-	zone: string
+	zone: Zone
 	content: Html
 	head?: Html
 	image?: string
 	type?: "website" | "article"
 }
-
-const navlink = (options: PageOptions, zone: string, text: string) => (
-	(zone === options.zone)
-		? html`<a href="${zone}" data-active>${text}</a>`
-		: html`<a href="${zone}">${text}</a>`
-)
 
 export const webpage = (options: PageOptions) => template(import.meta.url, async orb => html`
 	<!doctype html>
@@ -64,8 +58,7 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			<benev-menu></benev-menu>
 
 			<benev-header>
-				${navlink(options, "/", "games")}
-				${navlink(options, "/d/", "devlog")}
+				${topNav(options.zone)}
 			</benev-header>
 
 			${options.content}

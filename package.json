@@ -22,7 +22,7 @@
 		"esbuild@0.28.2": true
 	},
 	"dependencies": {
-		"@e280/authlocal": "^0.3.0-14",
+		"@e280/authlocal": "^0.3.0",
 		"@e280/sly": "^0.4.6",
 		"@e280/strata": "^0.4.4",
 		"@e280/stz": "^0.3.10",
@@ -32,8 +32,8 @@
 	"devDependencies": {
 		"@e280/hottie": "^0.1.5",
 		"@e280/octo": "^0.1.5",
-		"@e280/scute": "^0.5.1",
-		"@types/node": "^26.2.0",
+		"@e280/scute": "^0.5.2",
+		"@types/node": "^26.4.0",
 		"smol-toml": "^1.8.0",
 		"typescript": "^7.0.2"
 	},

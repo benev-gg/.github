@@ -13,7 +13,7 @@ export const devlogPost = (post: Post) => template(
 			: orb.url(`/assets/bannerbg.webp`, true)
 
 		return orb.place(webpage({
-			zone: "/d/",
+			zone: "devlog",
 			type: "article",
 			title: post.title,
 			description: post.summary,
