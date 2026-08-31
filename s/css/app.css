@@ -22,14 +22,6 @@
 		> main {
 			flex: 1 1 auto;
 		}
-
-		> footer {
-			display: flex;
-			gap: var(--benev-space);
-			justify-content: end;
-			padding: var(--benev-space);
-			--benev-link: #fffa;
-		}
 	}
 }
 

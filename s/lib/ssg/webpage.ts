@@ -63,10 +63,10 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 
 			${options.content}
 
-			<footer benev-slice>
+			<benev-footer>
 				<a href="https://discord.gg/BnZx2utdev">discord</a>
 				<a href="https://github.com/benev-gg">github</a>
-			</footer>
+			</benev-footer>
 		</body>
 	</html>
 `)

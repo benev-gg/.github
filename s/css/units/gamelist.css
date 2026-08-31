@@ -86,5 +86,11 @@
 	.game.nano {
 		background: url("/assets/nano.webp") center center / cover;
 	}
+
+	.game.falrysk {
+		background:
+			linear-gradient(to right, #000c, #0000),
+			url("/assets/falrysk.webp") center center / cover;
+	}
 }
 
