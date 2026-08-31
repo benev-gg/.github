@@ -55,7 +55,9 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			${options.head}
 		</head>
 		<body>
-			<benev-menu></benev-menu>
+			<benev-menu>
+				<benev-account></benev-account>
+			</benev-menu>
 
 			<benev-header>
 				${topNav(options.zone)}
