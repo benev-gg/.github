@@ -11,9 +11,11 @@ export function xAuthor(post: Post) {
 		timeStyle: "short",
 	}).format(date)
 
+	const avatarStyle = `--avatar-url: url('${avatar(post.author)}');`
+
 	return html`
 		<div x-author>
-			<img src="${avatar(post.author)}" alt=""/>
+			<div class=avatar style="${avatarStyle}"></div>
 			<div>
 				<span>${post.author}</span>
 				<time datetime="${date.toISOString()}" title="${prettyTime}">
