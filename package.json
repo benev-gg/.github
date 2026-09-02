@@ -22,7 +22,7 @@
 		"esbuild@0.28.2": true
 	},
 	"dependencies": {
-		"@benev/web": "0.1.0-4",
+		"@benev/web": "0.1.0-5",
 		"@e280/authlocal": "^0.3.0",
 		"@e280/sly": "^0.4.6",
 		"@e280/strata": "^0.4.4",
@@ -34,7 +34,7 @@
 		"@e280/hottie": "^0.1.5",
 		"@e280/octo": "^0.1.5",
 		"@e280/scute": "^0.5.2",
-		"@types/node": "^26.4.0",
+		"@types/node": "^26.4.1",
 		"smol-toml": "^1.8.0",
 		"typescript": "^7.0.2"
 	},
