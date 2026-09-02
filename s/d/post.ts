@@ -23,8 +23,11 @@ export const devlogPost = (post: Post) => template(
 				: undefined,
 
 			head: html`
-				<meta name="author" content="${post.author}">
-				<meta property="article:published_time" content="${new Date(post.time).toISOString()}">
+				<meta property="article:section" content="devlog"/>
+				<meta property="article:published_time" content="${new Date(post.time).toISOString()}"/>
+				${post.tags.map(tag => html`
+					<meta property="article:tag" content="${tag}"/>
+				`)}
 			`,
 
 			content: html`
