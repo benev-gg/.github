@@ -23,7 +23,7 @@
 		"esbuild@0.28.2": true
 	},
 	"dependencies": {
-		"@benev/web": "0.1.0-6",
+		"@benev/web": "^0.1.0-8",
 		"@e280/authlocal": "^0.3.1",
 		"@e280/sly": "^0.4.6",
 		"@e280/strata": "^0.4.4",
