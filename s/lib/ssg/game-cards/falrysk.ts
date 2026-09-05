@@ -10,7 +10,7 @@ export const falryskCard = template(import.meta.url, async _orb => html`
 		<div class=panel>
 			<hgroup>
 				<h2>falrysk</h2>
-				<p>a world of great wonders, and great dangers</p>
+				<p>anything could happen</p>
 			</hgroup>
 
 			<ul>
