@@ -2,6 +2,7 @@
 import {benevCssText, topNav, Zone} from "@benev/web/ssg"
 import {template, html, socialCard, Html} from "@e280/scute"
 import {consts} from "../../consts.js"
+import {canonicalUrl} from "../utils/canonical-url.js"
 
 export type PageOptions = {
 	title: string
@@ -22,14 +23,15 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			<meta name="darkreader-lock"/>
 
 			<title>${options.title}</title>
-			<link rel="canonical" href="${consts.origin + orb.url('@/', true) + '/'}"/>
+			<link rel="canonical" href="${canonicalUrl(orb)}"/>
 			<meta name="description" content="${options.description}"/>
 
 			${socialCard({
 				type: options.type ?? "website",
 				title: `👼 ${options.title}`,
 				description: options.description,
-				themeColor: "#f2ea8e",
+				themeColor: "#ebb935",
+				url: canonicalUrl(orb),
 				siteName: consts.domain,
 				image: consts.origin + (options.image ?? consts.favicon),
 			})}
