@@ -1,5 +1,5 @@
 
-import {benevCssText, topNav, Zone} from "@benev/web/ssg"
+import {benevCssText, benevNav, Zone} from "@benev/web/ssg"
 import {template, html, socialCard, Html} from "@e280/scute"
 import {consts} from "../../consts.js"
 import {canonicalUrl} from "../utils/canonical-url.js"
@@ -62,7 +62,7 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 			</benev-menu>
 
 			<benev-header>
-				${topNav(options.zone)}
+				${benevNav(options.zone)}
 			</benev-header>
 
 			${options.content}
