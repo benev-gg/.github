@@ -58,7 +58,9 @@ export const webpage = (options: PageOptions) => template(import.meta.url, async
 		</head>
 		<body>
 			<benev-menu>
-				<benev-account></benev-account>
+				<div class=panel>
+					<benev-account></benev-account>
+				</div>
 			</benev-menu>
 
 			<benev-header>
