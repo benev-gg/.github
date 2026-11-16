@@ -9,6 +9,7 @@ export type Post = {
 	tags: string[]
 	content: string
 	image?: string
+	draft?: boolean
 }
 
 export type CatalogPost = {

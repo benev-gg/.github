@@ -5,6 +5,7 @@ import {micromark} from "micromark"
 import {readFile} from "node:fs/promises"
 import {Post} from "./types.js"
 import {list} from "../list.js"
+import {filterDrafts} from "./filter-drafts.js"
 import {sortByTime} from "../../utils/sort-by-time.js"
 
 const banner = "banner.webp"
@@ -35,6 +36,8 @@ export async function loadPosts(postsDir: string) {
 		return post
 	}))
 
-	return posts.sort(sortByTime)
+	return posts
+		.filter(filterDrafts())
+		.sort(sortByTime)
 }
 
