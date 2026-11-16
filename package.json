@@ -15,7 +15,7 @@
 		"start": "node x/server.js",
 		"link": "npm link ../web",
 		"build": "rm -rf x && mkdir x && tsc && scute -v",
-		"dev": "BENEV_DRAFTS=1 octo 'tsc -w' 'scute -wv' 'hottie x'",
+		"dev": "BENEV_DRAFTS=1 octo 'tsc -w' 'scute -v && scute -wv' 'hottie x'",
 		"test": "exit 0",
 		"count": "find s -path '*/_archive' -prune -o -name '*.ts' -exec wc -l {} +"
 	},
